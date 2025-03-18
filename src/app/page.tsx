@@ -1,10 +1,10 @@
 'use client'; // This is a client component 👈🏽
 
 import React from 'react';
-import IndexView from 'views/IndexView';
+import Service from 'views/Service';
 
-const IndexPage = (): JSX.Element => {
-  return <IndexView />;
+const ServicePage = (): JSX.Element => {
+  return <Service />;
 };
 
-export default IndexPage;
+export default ServicePage;
