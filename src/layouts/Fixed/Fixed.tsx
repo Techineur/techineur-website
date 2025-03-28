@@ -6,7 +6,7 @@ import Divider from '@mui/material/Divider';
 import AppBar from '@mui/material/AppBar';
 
 import Container from 'components/Container';
-import { Topbar, Sidebar, Footer } from './components';
+import {  Sidebar, Footer, Topbar } from './components';
 import pages from '../navigation--docs';
 
 interface Props {

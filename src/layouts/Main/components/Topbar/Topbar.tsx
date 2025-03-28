@@ -5,9 +5,9 @@ import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 
 import { NavItem } from './components';
+import Link from 'next/link';
 
 interface Props {
-  // eslint-disable-next-line @typescript-eslint/ban-types
   onSidebarOpen: () => void;
   pages: {
     landings: Array<PageItem>;
@@ -18,6 +18,7 @@ interface Props {
     portfolio: Array<PageItem>;
   };
   colorInvert?: boolean;
+  noUnderline?: boolean;
 }
 
 const Topbar = ({
@@ -47,70 +48,461 @@ const Topbar = ({
         display={'flex'}
         component="a"
         href="/"
-        title="theFront"
-        width={{ xs: 100, md: 120 }}
+        title="Techineur"
+        sx={{
+          width: { xs: 100, sm: 120, md: 140, lg: 160 },
+          height: { xs: 40, sm: 50, md: 60, lg: 70 },
+        }}
       >
         <Box
           component={'img'}
-          src={
-            mode === 'light' && !colorInvert
-              ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
-              : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
-          }
-          height={1}
-          width={1}
+          src={'https://www.techineur.com/assets/img/Techineur.svg'}
+          alt="Techineur Logo"
+          sx={{
+            height: 1,
+            width: 1,
+            objectFit: 'contain',
+          }}
         />
       </Box>
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
         <Box>
-          <NavItem
-            title={'Landings'}
-            id={'landing-pages'}
-            items={landingPages}
-            colorInvert={colorInvert}
-          />
+        <Link href="aboutUs" passHref>
+  <Button
+    component="a"
+    sx={{
+      color: colorInvert ? 'common.white' : 'text.primary',
+      position: 'relative',
+      overflow: 'hidden',
+      '&:hover': {
+        backgroundColor: 'transparent',
+        '&::before': {
+          transform: 'scaleX(1)',
+          transformOrigin: 'left'
+        },
+        '& .button-text': {
+          color: theme.palette.primary.main,
+          fontWeight: 600
+        }
+      },
+      '&::before': {
+        content: '""',
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        width: '100%',
+        height: '2px',
+        backgroundColor: theme.palette.primary.main,
+        transform: 'scaleX(0)',
+        transformOrigin: 'right',
+        transition: theme.transitions.create('transform', {
+          duration: theme.transitions.duration.standard,
+          easing: theme.transitions.easing.easeInOut
+        })
+      },
+      textTransform: 'none',
+      textDecoration: 'none',
+      fontWeight: 'medium',
+      fontSize: '1rem',
+      padding: '6px 8px',
+      borderRadius: 0, // Sharp corners for modern look
+      minWidth: 'auto' // Remove extra button padding
+    }}
+  >
+    <Box 
+      component="span" 
+      className="button-text"
+      sx={{
+        transition: theme.transitions.create(['color', 'font-weight'], {
+          duration: theme.transitions.duration.shorter,
+          easing: theme.transitions.easing.easeOut
+        }),
+        display: 'inline-block',
+        position: 'relative',
+        zIndex: 1
+      }}
+    >
+      WHO WE ARE
+    </Box>
+  </Button>
+</Link>
+        </Box>
+        <Box marginLeft={4}>
+        <Link href="Products" passHref>
+  <Button
+    component="a"
+    sx={{
+      color: colorInvert ? 'common.white' : 'text.primary',
+      position: 'relative',
+      overflow: 'hidden',
+      '&:hover': {
+        backgroundColor: 'transparent',
+        '&::before': {
+          transform: 'scaleX(1)',
+          transformOrigin: 'left'
+        },
+        '& .button-text': {
+          color: theme.palette.primary.main,
+          fontWeight: 600
+        }
+      },
+      '&::before': {
+        content: '""',
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        width: '100%',
+        height: '2px',
+        backgroundColor: theme.palette.primary.main,
+        transform: 'scaleX(0)',
+        transformOrigin: 'right',
+        transition: theme.transitions.create('transform', {
+          duration: theme.transitions.duration.standard,
+          easing: theme.transitions.easing.easeInOut
+        })
+      },
+      textTransform: 'none',
+      textDecoration: 'none',
+      fontWeight: 'medium',
+      fontSize: '1rem',
+      padding: '6px 8px',
+      borderRadius: 0, // Sharp corners for modern look
+      minWidth: 'auto' // Remove extra button padding
+    }}
+  >
+    <Box 
+      component="span" 
+      className="button-text"
+      sx={{
+        transition: theme.transitions.create(['color', 'font-weight'], {
+          duration: theme.transitions.duration.shorter,
+          easing: theme.transitions.easing.easeOut
+        }),
+        display: 'inline-block',
+        position: 'relative',
+        zIndex: 1
+      }}
+    >
+      PRODUCTS
+    </Box>
+  </Button>
+</Link>
+        </Box>
+        <Box marginLeft={4}>
+        <Link href="Clients" passHref>
+  <Button
+    component="a"
+    sx={{
+      color: colorInvert ? 'common.white' : 'text.primary',
+      position: 'relative',
+      overflow: 'hidden',
+      '&:hover': {
+        backgroundColor: 'transparent',
+        '&::before': {
+          transform: 'scaleX(1)',
+          transformOrigin: 'left'
+        },
+        '& .button-text': {
+          color: theme.palette.primary.main,
+          fontWeight: 600
+        }
+      },
+      '&::before': {
+        content: '""',
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        width: '100%',
+        height: '2px',
+        backgroundColor: theme.palette.primary.main,
+        transform: 'scaleX(0)',
+        transformOrigin: 'right',
+        transition: theme.transitions.create('transform', {
+          duration: theme.transitions.duration.standard,
+          easing: theme.transitions.easing.easeInOut
+        })
+      },
+      textTransform: 'none',
+      textDecoration: 'none',
+      fontWeight: 'medium',
+      fontSize: '1rem',
+      padding: '6px 8px',
+      borderRadius: 0, // Sharp corners for modern look
+      minWidth: 'auto' // Remove extra button padding
+    }}
+  >
+    <Box 
+      component="span" 
+      className="button-text"
+      sx={{
+        transition: theme.transitions.create(['color', 'font-weight'], {
+          duration: theme.transitions.duration.shorter,
+          easing: theme.transitions.easing.easeOut
+        }),
+        display: 'inline-block',
+        position: 'relative',
+        zIndex: 1
+      }}
+    >
+      CLIENTS
+    </Box>
+  </Button>
+</Link>
+        </Box>
+        <Box marginLeft={4}>
+        <Link href="Services" passHref>
+  <Button
+    component="a"
+    sx={{
+      color: colorInvert ? 'common.white' : 'text.primary',
+      position: 'relative',
+      overflow: 'hidden',
+      '&:hover': {
+        backgroundColor: 'transparent',
+        '&::before': {
+          transform: 'scaleX(1)',
+          transformOrigin: 'left'
+        },
+        '& .button-text': {
+          color: theme.palette.primary.main,
+          fontWeight: 600
+        }
+      },
+      '&::before': {
+        content: '""',
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        width: '100%',
+        height: '2px',
+        backgroundColor: theme.palette.primary.main,
+        transform: 'scaleX(0)',
+        transformOrigin: 'right',
+        transition: theme.transitions.create('transform', {
+          duration: theme.transitions.duration.standard,
+          easing: theme.transitions.easing.easeInOut
+        })
+      },
+      textTransform: 'none',
+      textDecoration: 'none',
+      fontWeight: 'medium',
+      fontSize: '1rem',
+      padding: '6px 8px',
+      borderRadius: 0, // Sharp corners for modern look
+      minWidth: 'auto' // Remove extra button padding
+    }}
+  >
+    <Box 
+      component="span" 
+      className="button-text"
+      sx={{
+        transition: theme.transitions.create(['color', 'font-weight'], {
+          duration: theme.transitions.duration.shorter,
+          easing: theme.transitions.easing.easeOut
+        }),
+        display: 'inline-block',
+        position: 'relative',
+        zIndex: 1
+      }}
+    >
+      SERVICES
+    </Box>
+  </Button>
+</Link>
+        </Box>
+        <Box marginLeft={4}>
+        <Link href="ContactUs" passHref>
+  <Button
+    component="a"
+    sx={{
+      color: colorInvert ? 'common.white' : 'text.primary',
+      position: 'relative',
+      overflow: 'hidden',
+      '&:hover': {
+        backgroundColor: 'transparent',
+        '&::before': {
+          transform: 'scaleX(1)',
+          transformOrigin: 'left'
+        },
+        '& .button-text': {
+          color: theme.palette.primary.main,
+          fontWeight: 600
+        }
+      },
+      '&::before': {
+        content: '""',
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        width: '100%',
+        height: '2px',
+        backgroundColor: theme.palette.primary.main,
+        transform: 'scaleX(0)',
+        transformOrigin: 'right',
+        transition: theme.transitions.create('transform', {
+          duration: theme.transitions.duration.standard,
+          easing: theme.transitions.easing.easeInOut
+        })
+      },
+      textTransform: 'none',
+      textDecoration: 'none',
+      fontWeight: 'medium',
+      fontSize: '1rem',
+      padding: '6px 8px',
+      borderRadius: 0, // Sharp corners for modern look
+      minWidth: 'auto' // Remove extra button padding
+    }}
+  >
+    <Box 
+      component="span" 
+      className="button-text"
+      sx={{
+        transition: theme.transitions.create(['color', 'font-weight'], {
+          duration: theme.transitions.duration.shorter,
+          easing: theme.transitions.easing.easeOut
+        }),
+        display: 'inline-block',
+        position: 'relative',
+        zIndex: 1
+      }}
+    >
+      CONTACT US
+    </Box>
+  </Button>
+</Link>
+        </Box>
+        <Box marginLeft={4}>
+        <Link href="" passHref>
+  <Button
+    component="a"
+    sx={{
+      color: colorInvert ? 'common.white' : 'text.primary',
+      position: 'relative',
+      overflow: 'hidden',
+      '&:hover': {
+        backgroundColor: 'transparent',
+        '&::before': {
+          transform: 'scaleX(1)',
+          transformOrigin: 'left'
+        },
+        '& .button-text': {
+          color: theme.palette.primary.main,
+          fontWeight: 600
+        }
+      },
+      '&::before': {
+        content: '""',
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        width: '100%',
+        height: '2px',
+        backgroundColor: theme.palette.primary.main,
+        transform: 'scaleX(0)',
+        transformOrigin: 'right',
+        transition: theme.transitions.create('transform', {
+          duration: theme.transitions.duration.standard,
+          easing: theme.transitions.easing.easeInOut
+        })
+      },
+      textTransform: 'none',
+      textDecoration: 'none',
+      fontWeight: 'medium',
+      fontSize: '1rem',
+      padding: '6px 8px',
+      borderRadius: 0, // Sharp corners for modern look
+      minWidth: 'auto' // Remove extra button padding
+    }}
+  >
+    <Box 
+      component="span" 
+      className="button-text"
+      sx={{
+        transition: theme.transitions.create(['color', 'font-weight'], {
+          duration: theme.transitions.duration.shorter,
+          easing: theme.transitions.easing.easeOut
+        }),
+        display: 'inline-block',
+        position: 'relative',
+        zIndex: 1
+      }}
+    >
+      SALESFORCE
+    </Box>
+  </Button>
+</Link>
+        </Box>
+        <Box marginLeft={4}>
+        <Link href="" passHref>
+  <Button
+    component="a"
+    sx={{
+      color: colorInvert ? 'common.white' : 'text.primary',
+      position: 'relative',
+      overflow: 'hidden',
+      '&:hover': {
+        backgroundColor: 'transparent',
+        '&::before': {
+          transform: 'scaleX(1)',
+          transformOrigin: 'left'
+        },
+        '& .button-text': {
+          color: theme.palette.primary.main,
+          fontWeight: 600
+        }
+      },
+      '&::before': {
+        content: '""',
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        width: '100%',
+        height: '2px',
+        backgroundColor: theme.palette.primary.main,
+        transform: 'scaleX(0)',
+        transformOrigin: 'right',
+        transition: theme.transitions.create('transform', {
+          duration: theme.transitions.duration.standard,
+          easing: theme.transitions.easing.easeInOut
+        })
+      },
+      textTransform: 'none',
+      textDecoration: 'none',
+      fontWeight: 'medium',
+      fontSize: '1rem',
+      padding: '6px 8px',
+      borderRadius: 0, // Sharp corners for modern look
+      minWidth: 'auto' // Remove extra button padding
+    }}
+  >
+    <Box 
+      component="span" 
+      className="button-text"
+      sx={{
+        transition: theme.transitions.create(['color', 'font-weight'], {
+          duration: theme.transitions.duration.shorter,
+          easing: theme.transitions.easing.easeOut
+        }),
+        display: 'inline-block',
+        position: 'relative',
+        zIndex: 1
+      }}
+    >
+      AI
+    </Box>
+  </Button>
+</Link>
         </Box>
         <Box marginLeft={4}>
           <NavItem
-            title={'Company'}
-            id={'company-pages'}
-            items={companyPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
-        <Box marginLeft={4}>
-          <NavItem
-            title={'Account'}
-            id={'account-pages'}
-            items={accountPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
-        <Box marginLeft={4}>
-          <NavItem
-            title={'Pages'}
-            id={'secondary-pages'}
-            items={secondaryPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
-        <Box marginLeft={4}>
-          <NavItem
-            title={'Blog'}
-            id={'blog-pages'}
-            items={blogPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
-        <Box marginLeft={4}>
-          <NavItem
-            title={'Portfolio'}
+            title={'PORTOFOLIO'}
             id={'portfolio-pages'}
             items={portfolioPages}
             colorInvert={colorInvert}
           />
         </Box>
-        <Box marginLeft={4}>
+        
+        {/* <Box marginLeft={4}>
           <Button
             variant="contained"
             color="primary"
@@ -121,7 +513,7 @@ const Topbar = ({
           >
             Buy now
           </Button>
-        </Box>
+        </Box> */}
       </Box>
       <Box sx={{ display: { xs: 'flex', md: 'none' } }} alignItems={'center'}>
         <Button
@@ -143,3 +535,4 @@ const Topbar = ({
 };
 
 export default Topbar;
+

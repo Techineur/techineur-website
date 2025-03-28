@@ -24,15 +24,15 @@ const Footer = (): JSX.Element => {
             display={'flex'}
             component="a"
             href="/"
-            title="theFront"
+            title="Techineur"
             width={80}
           >
             <Box
               component={'img'}
               src={
                 mode === 'light'
-                  ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
-                  : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
+                  ? 'https://www.techineur.com/assets/img/Techineur.svg'
+                  : 'https://www.techineur.com/assets/img/Techineur.svg'
               }
               height={1}
               width={1}
@@ -50,7 +50,7 @@ const Footer = (): JSX.Element => {
                 Home
               </Link>
             </Box>
-            <Box marginTop={1} marginRight={2}>
+            {/* <Box marginTop={1} marginRight={2}>
               <Link
                 underline="none"
                 component="a"
@@ -61,8 +61,8 @@ const Footer = (): JSX.Element => {
               >
                 Documentation
               </Link>
-            </Box>
-            <Box marginTop={1}>
+            </Box> */}
+            {/* <Box marginTop={1}>
               <Button
                 variant="outlined"
                 color="primary"
@@ -73,7 +73,7 @@ const Footer = (): JSX.Element => {
               >
                 Purchase now
               </Button>
-            </Box>
+            </Box> */}
           </Box>
         </Box>
       </Grid>
@@ -84,7 +84,7 @@ const Footer = (): JSX.Element => {
           color="text.secondary"
           gutterBottom
         >
-          &copy; theFront. 2021, Maccarian. All rights reserved
+          &copy;  Copyright 2025 Techineur All Rights Reserved
         </Typography>
         <Typography
           align={'center'}

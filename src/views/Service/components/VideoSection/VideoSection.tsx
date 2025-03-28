@@ -12,7 +12,7 @@ const VideoSection = (): JSX.Element => {
   return (
     <Grid container spacing={4}>
       <Grid item xs={12} md={6}>
-        <Box
+        {/* <Box
           sx={{
             maxWidth: 450,
             position: 'relative',
@@ -68,10 +68,10 @@ const VideoSection = (): JSX.Element => {
               </Box>
             </Box>
           </Box>
-        </Box>
+        </Box> */}
       </Grid>
       <Grid item container alignItems={'center'} xs={12} md={6}>
-        <Box>
+        {/* <Box>
           <Box marginBottom={2}>
             <Typography
               variant="h4"
@@ -109,7 +109,7 @@ const VideoSection = (): JSX.Element => {
               borderRadius={2}
             />
           </Box>
-        </Box>
+        </Box> */}
       </Grid>
     </Grid>
   );

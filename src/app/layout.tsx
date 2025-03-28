@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        <meta charSet="utf-8" />
+        <meta charSet="utf-8" /> ``
         <link
           rel="shortcut icon"
           href="https://assets.maccarianagency.com/favicons/thefront/favicon.ico"
