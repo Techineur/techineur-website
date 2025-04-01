@@ -1,119 +1,110 @@
-// components/PageTransitionLoader.tsx
 "use client";
-import { useState, useEffect } from 'react';
-import { usePathname, useSearchParams } from 'next/navigation';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Box, CircularProgress, Typography } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
 
-const Loader = () => {
-  const theme = useTheme();
-  const [isLoading, setIsLoading] = useState(false);
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
+import { motion } from "framer-motion";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+
+const Loading = () => {
+  const router = useRouter();
 
   useEffect(() => {
-    setIsLoading(false); // Reset loading state on route change
-  }, [pathname, searchParams]);
-
-  useEffect(() => {
-    const handleStart = () => setIsLoading(true);
-    const handleComplete = () => setIsLoading(false);
-
-    // Using window events as fallback
-    window.addEventListener('routeChangeStart', handleStart);
-    window.addEventListener('routeChangeComplete', handleComplete);
-    window.addEventListener('routeChangeError', handleComplete);
-
-    return () => {
-      window.removeEventListener('routeChangeStart', handleStart);
-      window.removeEventListener('routeChangeComplete', handleComplete);
-      window.removeEventListener('routeChangeError', handleComplete);
-    };
-  }, []);
+    const timer = setTimeout(() => {
+      router.push("/home");
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, [router]);
 
   return (
-    <AnimatePresence>
-      {isLoading && (
+    <div className="relative flex justify-center items-center h-screen bg-black overflow-hidden">
+      {/* Main centered container */}
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            backgroundColor: theme.palette.background.default,
-            zIndex: theme.zIndex.modal + 1,
-          }}
+          className="flex flex-col items-center"
         >
-          {/* Keep your existing animation content */}
-          <Box textAlign="center">
+          {/* Double circle loader - perfectly centered */}
+          <div className="relative w-20 h-20 flex justify-center items-center">
             <motion.div
-              animate={{ 
+              className="absolute w-full h-full border-4 border-blue-500 border-t-transparent rounded-full"
+              animate={{
                 rotate: 360,
-                scale: [1, 1.2, 1]
-              }}
-              transition={{
-                rotate: { 
-                  duration: 2, 
-                  repeat: Infinity, 
-                  ease: "linear" 
-                },
-                scale: {
-                  duration: 1.5,
-                  repeat: Infinity,
-                  repeatType: "reverse"
-                }
-              }}
-            >
-              <CircularProgress 
-                size={80} 
-                thickness={4}
-                sx={{ 
-                  color: theme.palette.primary.main,
-                  mb: 2
-                }} 
-              />
-            </motion.div>
-            <Typography 
-              variant="h6" 
-              component="div"
-              sx={{
-                color: theme.palette.text.primary,
-                mt: 2,
-                fontWeight: 500
-              }}
-            >
-              Loading...
-            </Typography>
-            <motion.div
-              initial={{ width: 0 }}
-              animate={{ width: "60%" }}
-              transition={{ 
-                duration: 2, 
-                repeat: Infinity,
-                repeatType: "reverse",
-                ease: "easeInOut"
-              }}
-              style={{
-                height: 4,
-                backgroundColor: theme.palette.primary.light,
-                margin: '20px auto',
-                borderRadius: 2
+                transition: { duration: 1, repeat: Infinity, ease: "linear" }
               }}
             />
-          </Box>
+            <motion.div
+              className="absolute w-full h-full border-4 border-cyan-400 border-b-transparent rounded-full opacity-70"
+              animate={{
+                rotate: -360,
+                transition: { duration: 1.5, repeat: Infinity, ease: "linear" }
+              }}
+            />
+          </div>
+
+          {/* Loading text with animated dots */}
+          <motion.h1 
+            className="text-white text-2xl font-semibold mt-4"
+            initial={{ y: 10, opacity: 0 }}
+            animate={{ 
+              y: 0, 
+              opacity: 1,
+              transition: { delay: 0.3, duration: 0.5 }
+            }}
+          >
+            Loading
+            <motion.span
+              animate={{
+                opacity: [0, 1, 0],
+                transition: { duration: 1.5, repeat: Infinity }
+              }}
+            >
+              ...
+            </motion.span>
+          </motion.h1>
         </motion.div>
-      )}
-    </AnimatePresence>
+      </div>
+    </div>
   );
 };
 
-export default Loader;
+export default Loading;
+
+
+// "use client";
+
+// import { motion } from "framer-motion";
+// import React from "react";
+
+// const Loading = () => {
+//   return (
+//     <div className="flex justify-center items-center h-screen bg-black">
+//       <motion.div
+//         initial={{ opacity: 0, scale: 0.5 }}
+//         animate={{ opacity: 1, scale: 1 }}
+//         transition={{ duration: 1 }}
+//         className="text-white text-4xl font-bold flex flex-col items-center"
+//       >
+//         <motion.span
+//           animate={{
+//             rotate: [0, 360],
+//             transition: { duration: 2, repeat: Infinity, ease: "linear" },
+//           }}
+//           className="border-4 border-blue-400 p-5 rounded-full mb-4"
+//         >
+//           T
+//         </motion.span>
+//         TECHINEUR
+//         <motion.div
+//           className="h-1 w-40 bg-gradient-to-r from-blue-400 to-cyan-400 mt-4"
+//           initial={{ width: "0%" }}
+//           animate={{ width: "100%" }}
+//           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+//         ></motion.div>
+//       </motion.div>
+//     </div>
+//   );
+// };
+
+// export default Loading;
