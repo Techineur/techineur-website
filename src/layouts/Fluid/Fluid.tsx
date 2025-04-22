@@ -60,7 +60,7 @@ const Fluid = ({
           paddingTop={'8px !important'}
           paddingBottom={'0 !important'}
         >
-          <TopNav colorInvert={colorInvert} />
+          <TopNav />
         </Container>
         <Container paddingY={1} maxWidth={1500}>
           <Box

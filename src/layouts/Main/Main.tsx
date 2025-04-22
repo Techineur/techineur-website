@@ -50,7 +50,7 @@ const Main = ({
     <Box>
       <Box bgcolor={bgcolor} position={'relative'} zIndex={theme.zIndex.appBar}>
         <Container paddingTop={'8px !important'} paddingBottom={'0 !important'}>
-          <TopNav colorInvert={colorInvert} />
+          <TopNav />
         </Container>
       </Box>
       <AppBar
