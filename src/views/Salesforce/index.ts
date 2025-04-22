@@ -1,1 +1,1 @@
-export {default} from './Salesforce';
+export { default } from './Salesforce';

@@ -86,8 +86,12 @@ const Hero = (): JSX.Element => {
               color: 'common.white',
             }}
           >
-            Our team provides comprehensive mobile application development for Packaged ERP systems, with expertise spanning design, development, and support. Skilled developers specialize in ERP Mobile development and seamless integration to enhance efficiency. We deliver exceptional, cutting-edge mobile solutions that empower businesses and improve user experience.
-            
+            Our team provides comprehensive mobile application development for
+            Packaged ERP systems, with expertise spanning design, development,
+            and support. Skilled developers specialize in ERP Mobile development
+            and seamless integration to enhance efficiency. We deliver
+            exceptional, cutting-edge mobile solutions that empower businesses
+            and improve user experience.
           </Typography>
         </Box>
       </Container>

@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -22,7 +21,7 @@ const Partners = (): JSX.Element => {
         <Grid item xs={12} md={6}>
           <Box>
             <Typography variant={'h4'} gutterBottom sx={{ fontWeight: 700 }}>
-              Trusted by you favorite companies     
+              Trusted by you favorite companies
             </Typography>
             {/* <Typography variant={'h6'} component={'p'} color={'text.secondary'}>
               We are registered as a distributor with AMFI,
@@ -59,4 +58,4 @@ const Partners = (): JSX.Element => {
   );
 };
 
-export default Partners;
+export default Partners;

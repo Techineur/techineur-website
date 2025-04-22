@@ -48,7 +48,7 @@ const Team = (): JSX.Element => {
 
   return (
     <Box>
-      <Box marginBottom={4}> 
+      <Box marginBottom={4}>
         <Typography
           sx={{
             textTransform: 'uppercase',

@@ -86,9 +86,9 @@ const Hero = (): JSX.Element => {
               color: 'common.white',
             }}
           >
-            
-Dedicated to delivering exceptional service that exceeds expectations.
-Your satisfaction is our mission – we're committed to excellence in everything we do.
+            Dedicated to delivering exceptional service that exceeds
+            expectations. Your satisfaction is our mission – we&apos;re
+            committed to excellence in everything we do.
           </Typography>
         </Box>
       </Container>

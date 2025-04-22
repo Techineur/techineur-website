@@ -61,9 +61,7 @@ const Hero = (): JSX.Element => {
               sx={{
                 color: theme.palette.common.white,
               }}
-            >
-              
-            </Typography>
+            ></Typography>
           </Box>
         </Box>
       </Container>

@@ -1,11 +1,10 @@
 'use client'; // This is a client component 👈🏽
 
 import React from 'react';
-import {  WhoWeAre } from 'views/About/Components';
+import { WhoWeAre } from 'views/About/Components';
 
-
-const AboutUs = (): JSX.Element => {
+const WhoWeArePage = (): JSX.Element => {
   return <WhoWeAre />;
 };
 
-export default WhoWeAre;
+export default WhoWeArePage;

@@ -1,4 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */
+/** eslint-disable quotes */
 import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -32,6 +32,7 @@ const mock = [
   {
     title: 'Bombay Dyeing',
     subtitle:
+      // eslint-disable-next-line quotes
       "Bombay Dyeing & Manufacturing Co. Ltd., established in 1879, is one of India's most renowned and trusted textile companies with a legacy spanning over 140 years. As a flagship company of the Wadia Group, Bombay Dyeing has evolved from its origins in textile manufacturing to become a diversified conglomerate with interests in textiles, retail, real estate, and polyester.",
     icon: (
       <svg
@@ -98,6 +99,7 @@ const mock = [
   {
     title: 'Samaya Spa',
     subtitle:
+      // eslint-disable-next-line quotes
       "Samaya World SPA is an innovative technology solutions provider specializing in Single Page Applications (SPA) and modern web development. With expertise in creating responsive, dynamic, and high-performance web applications, Samaya World SPA helps organizations deliver exceptional digital experiences that engage users and drive business growth in today's fast-paced digital environment.",
     icon: (
       <svg
@@ -120,6 +122,7 @@ const mock = [
   {
     title: 'NTPC',
     subtitle:
+      // eslint-disable-next-line quotes
       "NTPC Limited (formerly National Thermal Power Corporation) is India's largest power generation company and a central Public Sector Undertaking (PSU) under the Ministry of Power, Government of India. Established in 1975, NTPC has evolved from a thermal power generation company to an integrated power company with a diversified portfolio spanning thermal, hydro, nuclear, and renewable energy sources. With its commitment to providing reliable and affordable electricity, NTPC plays a crucial role in India's economic growth and development.",
     icon: (
       <svg
@@ -164,7 +167,6 @@ const Features = (): JSX.Element => {
           sx={{ fontWeight: 700 }}
         >
           Trusted by Industry Leaders
-
         </Typography>
         <Typography
           variant={'h6'}
@@ -172,7 +174,7 @@ const Features = (): JSX.Element => {
           color={'text.secondary'}
           align={'center'}
         >
-         Building lasting partnerships with organizations that shape the future
+          Building lasting partnerships with organizations that shape the future
         </Typography>
       </Box>
       <Box>

@@ -8,4 +8,4 @@ const ContactViewPage = (): JSX.Element => {
   return <Contact />;
 };
 
-export default Contact;
+export default ContactViewPage;

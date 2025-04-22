@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -10,7 +9,7 @@ const mock = [
   {
     title: 'Web / App Development',
     subtitle:
-    'We create visually appealing, user-friendly websites with clear navigation while providing innovative mobile application development for Packaged ERP systems. Our skilled team delivers cutting-edge solutions that enhance efficiency and user experience through seamless integration and comprehensive support.',
+      'We create visually appealing, user-friendly websites with clear navigation while providing innovative mobile application development for Packaged ERP systems. Our skilled team delivers cutting-edge solutions that enhance efficiency and user experience through seamless integration and comprehensive support.',
     icon: (
       <svg
         height={24}

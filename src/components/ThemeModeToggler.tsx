@@ -18,7 +18,6 @@ const ThemeModeToggler = (): JSX.Element => {
         minWidth: 'auto',
         padding: 0.5,
         borderColor: alpha(theme.palette.divider, 0.2),
-        
       }}
     >
       {mode === 'light' ? (

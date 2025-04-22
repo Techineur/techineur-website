@@ -1,5 +1,5 @@
 const pages = {
-   landings: [
+  landings: [
     {
       title: 'About Us',
       href: '/mobile-app',
@@ -72,7 +72,7 @@ const pages = {
     //   title: 'E-commerce',
     //   href: '/e-commerce',
     // },
-   ],
+  ],
   company: [
     {
       title: 'Our Products',
@@ -192,19 +192,19 @@ const pages = {
       title: 'Contact',
       href: '/ContactUs',
     },
-  //   {
-  //     title: 'Search',
-  //     href: '/blog-search',
-  //   },
-  //   {
-  //     title: 'Newsroom',
-  //     href: '/blog-newsroom',
-  //   },
-  //   {
-  //     title: 'Article',
-  //     href: '/blog-article',
-  //   },
-   ],
+    //   {
+    //     title: 'Search',
+    //     href: '/blog-search',
+    //   },
+    //   {
+    //     title: 'Newsroom',
+    //     href: '/blog-newsroom',
+    //   },
+    //   {
+    //     title: 'Article',
+    //     href: '/blog-article',
+    //   },
+  ],
   portfolio: [
     {
       title: 'Grid View',

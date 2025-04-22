@@ -37,10 +37,11 @@ const Story = (): JSX.Element => {
                 mb: 2,
               }}
             >
-              At Techineur Solutions, we operate as a one-stop platform designed to meet and exceed
-              all your digital needs under a single, comprehensive brand. We are deeply committed to
-              not just fulfilling, but surpassing your specific requirements by closely collaborating with
-              you to bring your unique vision to life.
+              At Techineur Solutions, we operate as a one-stop platform designed
+              to meet and exceed all your digital needs under a single,
+              comprehensive brand. We are deeply committed to not just
+              fulfilling, but surpassing your specific requirements by closely
+              collaborating with you to bring your unique vision to life.
             </Typography>
             <Typography
               component={'p'}
@@ -51,11 +52,12 @@ const Story = (): JSX.Element => {
                 mb: 2,
               }}
             >
-              With a focus on various domains of expertise, our wide-ranging services span from Web
-              Development, Mobile Applications, and Web Services to Digital Marketing. In today's
-              interconnected landscape, we understand the importance of seamless interconnectivity,
-              and we are consistently adapting and improving to better serve this critical aspect of
-              modern business.
+              With a focus on various domains of expertise, our wide-ranging
+              services span from Web Development, Mobile Applications, and Web
+              Services to Digital Marketing. In today's interconnected
+              landscape, we understand the importance of seamless
+              interconnectivity, and we are consistently adapting and improving
+              to better serve this critical aspect of modern business.
             </Typography>
             <Typography
               component={'p'}
@@ -65,10 +67,11 @@ const Story = (): JSX.Element => {
                 fontSize: '1.1rem',
               }}
             >
-              Whatever your digital needs may be, our dedicated team pledges to work alongside you to
-              accomplish your goals in a timely and effective manner. We firmly believe that delivering
-              on our promises is not just a commitment but a testament to the values that drive our
-              business forward every day.
+              Whatever your digital needs may be, our dedicated team pledges to
+              work alongside you to accomplish your goals in a timely and
+              effective manner. We firmly believe that delivering on our
+              promises is not just a commitment but a testament to the values
+              that drive our business forward every day.
             </Typography>
           </Box>
         </Grid>

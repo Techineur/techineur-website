@@ -1,10 +1,6 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Card from '@mui/material/Card';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import InputAdornment from '@mui/material/InputAdornment';
 import { useTheme } from '@mui/material/styles';
 
 import Container from 'components/Container';
@@ -76,7 +72,7 @@ const Hero = (): JSX.Element => {
             boxShadow={4}
             marginTop={4}
           > */}
-            {/* <form noValidate autoComplete="off">
+          {/* <form noValidate autoComplete="off">
               <Box display="flex" alignItems={'center'}>
                 <Box width={1} marginRight={1}>
                   <TextField
@@ -116,7 +112,7 @@ const Hero = (): JSX.Element => {
                     }}
                   />
                 </Box> */}
-                {/* <Box>
+          {/* <Box>
                   <Button
                     sx={{ height: 54, minWidth: 100, whiteSpace: 'nowrap' }}
                     variant="contained"
@@ -127,7 +123,7 @@ const Hero = (): JSX.Element => {
                     Search
                   </Button>
                 </Box> */}
-              {/* </Box>
+          {/* </Box>
             </form> */}
           {/* </Box> */}
         </Box>

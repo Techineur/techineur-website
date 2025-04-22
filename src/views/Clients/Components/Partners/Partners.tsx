@@ -16,7 +16,7 @@ const mock = [
   'https://techineur.com/assets/img/logo/appsguru.png',
   'https://techineur.com/assets/img/logo/samspa.png',
   'https://www.vidyardi.com/assets/images/logo-light13.png',
-  'https://techineur.com/assets/img/logo/5.png'
+  'https://techineur.com/assets/img/logo/5.png',
 ];
 
 const Partners = (): JSX.Element => {
@@ -24,7 +24,7 @@ const Partners = (): JSX.Element => {
   const isSm = useMediaQuery(theme.breakpoints.up('sm'), {
     defaultMatches: true,
   });
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), { 
+  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
   });
   const isLg = useMediaQuery(theme.breakpoints.up('lg'), {
@@ -84,7 +84,7 @@ const Partners = (): JSX.Element => {
           zIndex: 0,
         }}
       />
-      
+
       <Typography
         variant="h4"
         align="center"
@@ -100,7 +100,7 @@ const Partners = (): JSX.Element => {
       >
         Our Trusted Partners
       </Typography>
-      
+
       <Box
         sx={{
           position: 'relative',
@@ -131,9 +131,10 @@ const Partners = (): JSX.Element => {
                   width: 'auto',
                   height: 'auto',
                   objectFit: 'contain',
-                  filter: theme.palette.mode === 'dark' 
-                    ? 'brightness(0) invert(0.9)' 
-                    : 'none',
+                  filter:
+                    theme.palette.mode === 'dark'
+                      ? 'brightness(0) invert(0.9)'
+                      : 'none',
                   opacity: 0.9,
                   transition: 'all 0.3s ease',
                   '&:hover': {

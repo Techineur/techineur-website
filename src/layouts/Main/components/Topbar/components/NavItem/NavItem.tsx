@@ -28,12 +28,15 @@ const NavItem = ({
   colorInvert = false,
   hoverMenu = false,
 }: Props): JSX.Element => {
-  const theme = useTheme(); 
+  const theme = useTheme();
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
   const [openedPopoverId, setOpenedPopoverId] = useState<string | null>(null);
   const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
 
-  const handleOpen = (event: React.MouseEvent<HTMLElement>, popoverId: string) => {
+  const handleOpen = (
+    event: React.MouseEvent<HTMLElement>,
+    popoverId: string,
+  ) => {
     setAnchorEl(event.currentTarget);
     setOpenedPopoverId(popoverId);
   };
@@ -57,7 +60,7 @@ const NavItem = ({
       setHoverTimeout(
         setTimeout(() => {
           handleClose();
-        }, 300) as NodeJS.Timeout
+        }, 300) as NodeJS.Timeout,
       );
     }
   };
@@ -92,7 +95,7 @@ const NavItem = ({
         {items.length > 0 && (
           <ExpandMoreIcon
             sx={{
-              marginLeft: theme.spacing(1/4),
+              marginLeft: theme.spacing(1 / 4),
               width: 16,
               height: 16,
               transform: openedPopoverId === id ? 'rotate(180deg)' : 'none',
@@ -101,7 +104,7 @@ const NavItem = ({
           />
         )}
       </Box>
-      
+
       {items.length > 0 && (
         <Popover
           elevation={3}

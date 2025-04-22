@@ -1,31 +1,19 @@
 import React from 'react';
-import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
 import Main from 'layouts/Main';
 import Container from 'components/Container';
-import {
-    Features,
-//   Team,
-//   Features,
-//   Hero,
-//   Partners,
-//   Process,
-//   Reviews,
-//   Work,
-Hero,
-Partners,
-} from './Components';
+import { Hero, Partners } from './Components';
 
-const Clients= (): JSX.Element => {
+const Clients = (): JSX.Element => {
   return (
     <Main colorInvert={true}>
       <Hero />
-       <Box bgcolor={'primary.main'}>
+      <Box bgcolor={'primary.main'}>
         <Container paddingX={'0 !important'} maxWidth={1}>
           <Partners />
         </Container>
       </Box>
-       {/* <Container>
+      {/* <Container>
         <Features />
       </Container>  */}
       {/* <Container>
@@ -41,7 +29,7 @@ const Clients= (): JSX.Element => {
       <Divider />
       <Container>
         <Team />
-      </Container> */} 
+      </Container> */}
     </Main>
   );
 };

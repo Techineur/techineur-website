@@ -71,23 +71,16 @@
 // export default TopNav;
 import React, { JSX } from 'react';
 import Box from '@mui/material/Box';
-import { ThemeModeToggler } from 'layouts/Fixed/components/Topbar/components';
 
-interface Props {
-  colorInvert?: boolean;
-}
-
-const TopNav = ({ colorInvert = false }: Props): JSX.Element => {
+const TopNav = (): JSX.Element => {
   return (
     // Main container with flex layout aligned to the right
     <Box display={'flex'} justifyContent={'flex-end'} alignItems={'center'}>
-      
       {/* Container for the theme mode toggler component */}
       <Box>
         {/* ThemeModeToggler component that handles light/dark mode switching */}
         {/* <ThemeModeToggler /> */}
       </Box>
-      
     </Box>
   );
 };

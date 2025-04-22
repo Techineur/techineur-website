@@ -1,35 +1,33 @@
 import React from 'react';
-import Box from '@mui/material/Box';
-import Divider from '@mui/material/Divider';
 
 import Main from 'layouts/Main';
 import Container from 'components/Container';
 import {
-//   Contact,
-//   Gallery,
+  //   Contact,
+  //   Gallery,
   Hero,
-//   Partners,
-//    Ourcapabilities,
-    Crmservices,
-//   WhoWeAre,
-//   Partners,
-//   Story,
-//   Team,
-//   WhoWeAre,
-//   Application,
+  //   Partners,
+  //    Ourcapabilities,
+  Crmservices,
+  //   WhoWeAre,
+  //   Partners,
+  //   Story,
+  //   Team,
+  //   WhoWeAre,
+  //   Application,
 } from './Components';
 
 const Salesforce = (): JSX.Element => {
   return (
     <Main colorInvert={true}>
       <Hero />
-        <Container>
+      <Container>
         <Crmservices />
       </Container>
-       {/* <Container paddingTop={'0 !important'}>
+      {/* <Container paddingTop={'0 !important'}>
         <Casestudy />
       </Container> */}
-       {/* <Container maxWidth={800} paddingY={'0 !important'}>
+      {/* <Container maxWidth={800} paddingY={'0 !important'}>
         <Divider />
       </Container> */}
       {/* <Container>

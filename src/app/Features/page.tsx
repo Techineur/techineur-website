@@ -3,7 +3,6 @@
 import React from 'react';
 import { Features } from 'views/Clients/Components';
 
-
 const feature = (): JSX.Element => {
   return <Features />;
 };

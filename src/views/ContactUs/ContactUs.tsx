@@ -1,33 +1,24 @@
 import React from 'react';
-import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import Divider from '@mui/material/Divider';
 
 import Main from 'layouts/Main';
 import Container from 'components/Container';
 import {
-//   FeaturedArticles,
-//   FooterNewsletter,
+  //   FeaturedArticles,
+  //   FooterNewsletter,
   Hero,
   Contact,
-  Form
+  Form,
 
-//   LatestStories,
-//   MostViewedArticles,
-//   PopularNews,
-//   SidebarArticles,
-//   SidebarNewsletter,
-//   Tags,
+  //   LatestStories,
+  //   MostViewedArticles,
+  //   PopularNews,
+  //   SidebarArticles,
+  //   SidebarNewsletter,
+  //   Tags,
 } from './Components';
 
 const ContactUs = (): JSX.Element => {
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
-    defaultMatches: true,
-  });
-
   return (
     <Main colorInvert={true}>
       <Hero />
@@ -37,11 +28,8 @@ const ContactUs = (): JSX.Element => {
         </Container>
       </Box>
       <Container>
-        
         <Contact />
       </Container>
-      
-
 
       {/* <Container>
         <Grid container spacing={isMd ? 4 : 2}>

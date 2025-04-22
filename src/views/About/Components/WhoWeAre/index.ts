@@ -1,1 +1,1 @@
-export {default} from './WhoWeAre'
+export { default } from './WhoWeAre';

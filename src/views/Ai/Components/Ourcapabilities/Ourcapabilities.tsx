@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -17,11 +16,11 @@ const Ourcapabilities = (): JSX.Element => {
   });
 
   const capabilities = [
-    "We Craft Intelligent Interactions with Advanced NLP: Build chatbots, virtual assistants, and intelligent systems that have real conversations, understanding and responding to natural human language.",
-    "We Unleash the Power of AI with Machine Learning Expertise: Leverage cutting-edge AI models to analyze your data, automate tasks, and make intelligent predictions that drive results.",
-    "We Build Custom AI Solutions for You: Design and implement AI-powered solutions that are tailored to your specific business challenges and goals, ensuring a perfect fit.",
-    "We Integrate Seamlessly with Your Systems: Effortlessly integrate our AI solutions with your existing infrastructure for a cohesive and efficient workflow.",
-    "We Prioritize Data Security and Privacy: Maintain the highest standards of data security and privacy throughout the AI development and deployment process, giving you peace of mind."
+    'We Craft Intelligent Interactions with Advanced NLP: Build chatbots, virtual assistants, and intelligent systems that have real conversations, understanding and responding to natural human language.',
+    'We Unleash the Power of AI with Machine Learning Expertise: Leverage cutting-edge AI models to analyze your data, automate tasks, and make intelligent predictions that drive results.',
+    'We Build Custom AI Solutions for You: Design and implement AI-powered solutions that are tailored to your specific business challenges and goals, ensuring a perfect fit.',
+    'We Integrate Seamlessly with Your Systems: Effortlessly integrate our AI solutions with your existing infrastructure for a cohesive and efficient workflow.',
+    'We Prioritize Data Security and Privacy: Maintain the highest standards of data security and privacy throughout the AI development and deployment process, giving you peace of mind.',
   ];
 
   return (
@@ -42,7 +41,10 @@ const Ourcapabilities = (): JSX.Element => {
             </Typography>
             <List dense={false}>
               {capabilities.map((item, index) => (
-                <ListItem key={index} sx={{ alignItems: 'flex-start', py: 1.5 }}>
+                <ListItem
+                  key={index}
+                  sx={{ alignItems: 'flex-start', py: 1.5 }}
+                >
                   <ListItemIcon sx={{ minWidth: 32, mt: '3px' }}>
                     <CheckCircleIcon color="primary" fontSize="small" />
                   </ListItemIcon>

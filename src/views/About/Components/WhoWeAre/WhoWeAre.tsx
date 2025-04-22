@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -41,9 +40,10 @@ const WhoWeAre = (): JSX.Element => {
                 mb: 2,
               }}
             >
-              We aim to work with clients from all kinds of companies and through the gained
-              experience, we look to continuously strive to improve the ways in which we solve the
-              queries and challenges that our clients face.
+              We aim to work with clients from all kinds of companies and
+              through the gained experience, we look to continuously strive to
+              improve the ways in which we solve the queries and challenges that
+              our clients face.
             </Typography>
             <Typography
               component={'p'}
@@ -53,9 +53,9 @@ const WhoWeAre = (): JSX.Element => {
                 fontSize: '1.1rem',
               }}
             >
-              Our mission is to create a long-term partnership with our customers. Transparency,
-              robust project management, and seamless communication are the foundations of our
-              services.
+              Our mission is to create a long-term partnership with our
+              customers. Transparency, robust project management, and seamless
+              communication are the foundations of our services.
             </Typography>
           </Box>
         </Grid>
@@ -86,8 +86,8 @@ const WhoWeAre = (): JSX.Element => {
                 mb: 2,
               }}
             >
-              At Techineur Solutions, we have a highly skilled and professional team of dedicated
-              professionals to take care of your projects.
+              At Techineur Solutions, we have a highly skilled and professional
+              team of dedicated professionals to take care of your projects.
             </Typography>
             <Typography
               component={'p'}
@@ -97,8 +97,8 @@ const WhoWeAre = (): JSX.Element => {
                 fontSize: '1.1rem',
               }}
             >
-              We strive to provide world-class services to our partners to ensure the continuity,
-              growth, and profitability of our partners.
+              We strive to provide world-class services to our partners to
+              ensure the continuity, growth, and profitability of our partners.
             </Typography>
           </Box>
         </Grid>

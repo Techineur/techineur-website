@@ -11,11 +11,12 @@ const Hero = (): JSX.Element => {
     <Box
       position={'relative'}
       sx={{
-        backgroundImage: 'url("https://www.shutterstock.com/image-photo/closeup-business-items-people-meeting-600nw-178403168.jpg")',
+        backgroundImage:
+          'url("https://www.shutterstock.com/image-photo/closeup-business-items-people-meeting-600nw-178403168.jpg")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        marginTop: -13,  // This aligns with the navbar like your Contact page
-        paddingTop: 13,  // Compensates for the negative margin
+        marginTop: -13, // This aligns with the navbar like your Contact page
+        paddingTop: 13, // Compensates for the negative margin
         '&:after': {
           position: 'absolute',
           content: '" "',
@@ -65,7 +66,9 @@ const Hero = (): JSX.Element => {
                 fontStyle: 'italic',
               }}
             >
-              "Trusted partnerships that deliver exceptional results. Discover why leading businesses choose us to transform their vision into reality."
+              Trusted partnerships that deliver exceptional results. Discover
+              why leading businesses choose us to transform their vision into
+              reality.
             </Typography>
           </Box>
         </Box>

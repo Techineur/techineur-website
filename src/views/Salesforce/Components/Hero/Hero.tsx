@@ -86,8 +86,9 @@ const Hero = (): JSX.Element => {
               color: 'common.white',
             }}
           >
-            
-            Transform your customer relationships into lasting success stories with Salesforce          </Typography>
+            Transform your customer relationships into lasting success stories
+            with Salesforce{' '}
+          </Typography>
         </Box>
       </Container>
     </Box>

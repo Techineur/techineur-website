@@ -86,9 +86,10 @@ const Hero = (): JSX.Element => {
               color: 'common.white',
             }}
           >
-            
-            At Techineur, we're not just creating solutions; we're sculpting a future where
-            technology redefines boundaries and possibilities.          </Typography>
+            At Techineur, we&apos;re not just creating solutions; we&apos;re
+            sculpting a future where technology redefines boundaries and
+            possibilities.{' '}
+          </Typography>
         </Box>
       </Container>
     </Box>

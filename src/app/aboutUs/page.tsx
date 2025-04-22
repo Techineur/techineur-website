@@ -3,7 +3,6 @@
 import React from 'react';
 import About from 'views/About';
 
-
 const AboutUs = (): JSX.Element => {
   return <About />;
 };

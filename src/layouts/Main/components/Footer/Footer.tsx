@@ -1,7 +1,6 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
@@ -84,7 +83,7 @@ const Footer = (): JSX.Element => {
           color="text.secondary"
           gutterBottom
         >
-          &copy;  Copyright 2025 Techineur All Rights Reserved
+          &copy; Copyright 2025 Techineur All Rights Reserved
         </Typography>
         <Typography
           align={'center'}

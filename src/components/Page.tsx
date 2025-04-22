@@ -20,13 +20,13 @@ export const useDarkMode = (): [string, () => void, boolean] => {
   };
 
   const themeToggler = (): void => {
-    themeMode === 'light' ? setMode('dark') : setMode('light');
+    setMode(themeMode === 'light' ? 'dark' : 'light');
   };
 
   useEffect(() => {
     try {
       const localTheme = window.localStorage.getItem('themeMode');
-      localTheme ? setTheme(localTheme) : setMode('light');
+      setMode(localTheme || 'light');
     } catch {
       setMode('light');
     }

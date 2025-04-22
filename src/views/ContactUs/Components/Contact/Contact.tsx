@@ -44,7 +44,8 @@ const mock = [
   },
   {
     label: 'Address',
-    value: "Flat 201, Fortune Flora, Road 1, Lakshmi Nagar Colony, Saidabad, Hyderabad, Telangana, India. 500059",
+    value:
+      'Flat 201, Fortune Flora, Road 1, Lakshmi Nagar Colony, Saidabad, Hyderabad, Telangana, India. 500059',
     icon: (
       <svg
         width={20}

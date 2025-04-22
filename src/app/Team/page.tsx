@@ -3,10 +3,8 @@
 import React from 'react';
 import { Team } from 'views/About/Components';
 
-
-
-const AboutUs = (): JSX.Element => {
+const TeamPage = (): JSX.Element => {
   return <Team />;
 };
 
-export default Team;
+export default TeamPage;

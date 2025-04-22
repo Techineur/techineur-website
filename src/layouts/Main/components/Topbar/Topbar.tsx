@@ -27,15 +27,7 @@ const Topbar = ({
   colorInvert = false,
 }: Props): JSX.Element => {
   const theme = useTheme();
-  const { mode } = theme.palette;
-  const {
-    landings: landingPages,
-    secondary: secondaryPages,
-    company: companyPages,
-    account: accountPages,
-    portfolio: portfolioPages,
-    blog: blogPages,
-  } = pages;
+  const { secondary: secondaryPages } = pages;
 
   return (
     <Box
@@ -67,300 +59,312 @@ const Topbar = ({
       </Box>
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
         <Box>
-        <Link href="aboutUs" passHref>
-  <Button
-    component="a"
-    sx={{
-      color: colorInvert ? 'common.white' : 'text.primary',
-      position: 'relative',
-      overflow: 'hidden',
-      '&:hover': {
-        backgroundColor: 'transparent',
-        '&::before': {
-          transform: 'scaleX(1)',
-          transformOrigin: 'left'
-        },
-        '& .button-text': {
-          color: theme.palette.primary.main,
-          fontWeight: 600
-        }
-      },
-      '&::before': {
-        content: '""',
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        width: '100%',
-        height: '2px',
-        backgroundColor: theme.palette.primary.main,
-        transform: 'scaleX(0)',
-        transformOrigin: 'right',
-        transition: theme.transitions.create('transform', {
-          duration: theme.transitions.duration.standard,
-          easing: theme.transitions.easing.easeInOut
-        })
-      },
-      textTransform: 'none',
-      textDecoration: 'none',
-      fontWeight: 'medium',
-      fontSize: '1rem',
-      padding: '6px 8px',
-      borderRadius: 0, // Sharp corners for modern look
-      minWidth: 'auto' // Remove extra button padding
-    }}
-  >
-    <Box 
-      component="span" 
-      className="button-text"
-      sx={{
-        transition: theme.transitions.create(['color', 'font-weight'], {
-          duration: theme.transitions.duration.shorter,
-          easing: theme.transitions.easing.easeOut
-        }),
-        display: 'inline-block',
-        position: 'relative',
-        zIndex: 1,
-        whiteSpace: 'nowrap',
-      }}
-    >
-      WHO WE ARE
-    </Box>
-  </Button>
-</Link>
+          <Link href="aboutUs" passHref>
+            <Button
+              component="a"
+              sx={{
+                color: colorInvert ? 'common.white' : 'text.primary',
+                position: 'relative',
+                overflow: 'hidden',
+                '&:hover': {
+                  backgroundColor: 'transparent',
+                  '&::before': {
+                    transform: 'scaleX(1)',
+                    transformOrigin: 'left',
+                  },
+                  '& .button-text': {
+                    color: theme.palette.primary.main,
+                    fontWeight: 600,
+                  },
+                },
+                '&::before': {
+                  content: '""',
+                  position: 'absolute',
+                  bottom: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '2px',
+                  backgroundColor: theme.palette.primary.main,
+                  transform: 'scaleX(0)',
+                  transformOrigin: 'right',
+                  transition: theme.transitions.create('transform', {
+                    duration: theme.transitions.duration.standard,
+                    easing: theme.transitions.easing.easeInOut,
+                  }),
+                },
+                textTransform: 'none',
+                textDecoration: 'none',
+                fontWeight: 'medium',
+                fontSize: '1rem',
+                padding: '6px 8px',
+                borderRadius: 0, // Sharp corners for modern look
+                minWidth: 'auto', // Remove extra button padding
+              }}
+            >
+              <Box
+                component="span"
+                className="button-text"
+                sx={{
+                  transition: theme.transitions.create(
+                    ['color', 'font-weight'],
+                    {
+                      duration: theme.transitions.duration.shorter,
+                      easing: theme.transitions.easing.easeOut,
+                    },
+                  ),
+                  display: 'inline-block',
+                  position: 'relative',
+                  zIndex: 1,
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                WHO WE ARE
+              </Box>
+            </Button>
+          </Link>
         </Box>
         <Box marginLeft={4}>
-        <Link href="Products" passHref>
-  <Button
-    component="a"
-    sx={{
-      color: colorInvert ? 'common.white' : 'text.primary',
-      position: 'relative',
-      overflow: 'hidden',
-      '&:hover': {
-        backgroundColor: 'transparent',
-        '&::before': {
-          transform: 'scaleX(1)',
-          transformOrigin: 'left'
-        },
-        '& .button-text': {
-          color: theme.palette.primary.main,
-          fontWeight: 600
-        }
-      },
-      '&::before': {
-        content: '""',
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        width: '100%',
-        height: '2px',
-        backgroundColor: theme.palette.primary.main,
-        transform: 'scaleX(0)',
-        transformOrigin: 'right',
-        transition: theme.transitions.create('transform', {
-          duration: theme.transitions.duration.standard,
-          easing: theme.transitions.easing.easeInOut
-        })
-      },
-      textTransform: 'none',
-      textDecoration: 'none',
-      fontWeight: 'medium',
-      fontSize: '1rem',
-      padding: '6px 8px',
-      borderRadius: 0, // Sharp corners for modern look
-      minWidth: 'auto' // Remove extra button padding
-    }}
-  >
-    <Box 
-      component="span" 
-      className="button-text"
-      sx={{
-        transition: theme.transitions.create(['color', 'font-weight'], {
-          duration: theme.transitions.duration.shorter,
-          easing: theme.transitions.easing.easeOut
-        }),
-        display: 'inline-block',
-        position: 'relative',
-        zIndex: 1
-      }}
-    >
-      PRODUCTS
-    </Box>
-  </Button>
-</Link>
+          <Link href="Products" passHref>
+            <Button
+              component="a"
+              sx={{
+                color: colorInvert ? 'common.white' : 'text.primary',
+                position: 'relative',
+                overflow: 'hidden',
+                '&:hover': {
+                  backgroundColor: 'transparent',
+                  '&::before': {
+                    transform: 'scaleX(1)',
+                    transformOrigin: 'left',
+                  },
+                  '& .button-text': {
+                    color: theme.palette.primary.main,
+                    fontWeight: 600,
+                  },
+                },
+                '&::before': {
+                  content: '""',
+                  position: 'absolute',
+                  bottom: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '2px',
+                  backgroundColor: theme.palette.primary.main,
+                  transform: 'scaleX(0)',
+                  transformOrigin: 'right',
+                  transition: theme.transitions.create('transform', {
+                    duration: theme.transitions.duration.standard,
+                    easing: theme.transitions.easing.easeInOut,
+                  }),
+                },
+                textTransform: 'none',
+                textDecoration: 'none',
+                fontWeight: 'medium',
+                fontSize: '1rem',
+                padding: '6px 8px',
+                borderRadius: 0, // Sharp corners for modern look
+                minWidth: 'auto', // Remove extra button padding
+              }}
+            >
+              <Box
+                component="span"
+                className="button-text"
+                sx={{
+                  transition: theme.transitions.create(
+                    ['color', 'font-weight'],
+                    {
+                      duration: theme.transitions.duration.shorter,
+                      easing: theme.transitions.easing.easeOut,
+                    },
+                  ),
+                  display: 'inline-block',
+                  position: 'relative',
+                  zIndex: 1,
+                }}
+              >
+                PRODUCTS
+              </Box>
+            </Button>
+          </Link>
         </Box>
         <Box marginLeft={4}>
-        <Link href="Clients" passHref>
-  <Button
-    component="a"
-    sx={{
-      color: colorInvert ? 'common.white' : 'text.primary',
-      position: 'relative',
-      overflow: 'hidden',
-      '&:hover': {
-        backgroundColor: 'transparent',
-        '&::before': {
-          transform: 'scaleX(1)',
-          transformOrigin: 'left'
-        },
-        '& .button-text': {
-          color: theme.palette.primary.main,
-          fontWeight: 600
-        }
-      },
-      '&::before': {
-        content: '""',
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        width: '100%',
-        height: '2px',
-        backgroundColor: theme.palette.primary.main,
-        transform: 'scaleX(0)',
-        transformOrigin: 'right',
-        transition: theme.transitions.create('transform', {
-          duration: theme.transitions.duration.standard,
-          easing: theme.transitions.easing.easeInOut
-        })
-      },
-      textTransform: 'none',
-      textDecoration: 'none',
-      fontWeight: 'medium',
-      fontSize: '1rem',
-      padding: '6px 8px',
-      borderRadius: 0, // Sharp corners for modern look
-      minWidth: 'auto' // Remove extra button padding
-    }}
-  >
-    <Box 
-      component="span" 
-      className="button-text"
-      sx={{
-        transition: theme.transitions.create(['color', 'font-weight'], {
-          duration: theme.transitions.duration.shorter,
-          easing: theme.transitions.easing.easeOut
-        }),
-        display: 'inline-block',
-        position: 'relative',
-        zIndex: 1
-      }}
-    >
-      CLIENTS
-    </Box>
-  </Button>
-</Link>
+          <Link href="Clients" passHref>
+            <Button
+              component="a"
+              sx={{
+                color: colorInvert ? 'common.white' : 'text.primary',
+                position: 'relative',
+                overflow: 'hidden',
+                '&:hover': {
+                  backgroundColor: 'transparent',
+                  '&::before': {
+                    transform: 'scaleX(1)',
+                    transformOrigin: 'left',
+                  },
+                  '& .button-text': {
+                    color: theme.palette.primary.main,
+                    fontWeight: 600,
+                  },
+                },
+                '&::before': {
+                  content: '""',
+                  position: 'absolute',
+                  bottom: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '2px',
+                  backgroundColor: theme.palette.primary.main,
+                  transform: 'scaleX(0)',
+                  transformOrigin: 'right',
+                  transition: theme.transitions.create('transform', {
+                    duration: theme.transitions.duration.standard,
+                    easing: theme.transitions.easing.easeInOut,
+                  }),
+                },
+                textTransform: 'none',
+                textDecoration: 'none',
+                fontWeight: 'medium',
+                fontSize: '1rem',
+                padding: '6px 8px',
+                borderRadius: 0, // Sharp corners for modern look
+                minWidth: 'auto', // Remove extra button padding
+              }}
+            >
+              <Box
+                component="span"
+                className="button-text"
+                sx={{
+                  transition: theme.transitions.create(
+                    ['color', 'font-weight'],
+                    {
+                      duration: theme.transitions.duration.shorter,
+                      easing: theme.transitions.easing.easeOut,
+                    },
+                  ),
+                  display: 'inline-block',
+                  position: 'relative',
+                  zIndex: 1,
+                }}
+              >
+                CLIENTS
+              </Box>
+            </Button>
+          </Link>
         </Box>
-        <Box 
-  marginLeft={4}
-  sx={{
-    '& .NavItem-root .MuiTypography-root': {
-      color: colorInvert ? 'common.white' : 'text.primary',
-      position: 'relative',
-      overflow: 'hidden',
-      '&:hover': {
-        color: theme.palette.primary.main,
-        fontWeight: 600,
-      },
-      '&::before': {
-        content: '""',
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        width: '100%',
-        height: '2px',
-        backgroundColor: theme.palette.primary.main,
-        transform: 'scaleX(0)',
-        transformOrigin: 'right',
-        transition: theme.transitions.create('transform', {
-          duration: theme.transitions.duration.standard,
-          easing: theme.transitions.easing.easeInOut
-        })
-      },
-      '&:hover::before': {
-        transform: 'scaleX(1)',
-        transformOrigin: 'left'
-      },
-      textTransform: 'none',
-      fontWeight: 'medium',
-      fontSize: '1rem',
-      padding: '6px 8px',
-    }
-  }}
->
-  <NavItem
-    title={'SERVICES'}
-    id={'services-menu'}
-    items={[
-      { title: 'OUR SERVICES', href: '/Services' },
-      { title: 'SALESFORCE', href: '/Salesforce' },
-      { title: 'AI', href: '/Ai' },
-      ...secondaryPages
-    ]}
-    colorInvert={colorInvert}
-    hoverMenu={true}
-  />
-</Box>
+        <Box
+          marginLeft={4}
+          sx={{
+            '& .NavItem-root .MuiTypography-root': {
+              color: colorInvert ? 'common.white' : 'text.primary',
+              position: 'relative',
+              overflow: 'hidden',
+              '&:hover': {
+                color: theme.palette.primary.main,
+                fontWeight: 600,
+              },
+              '&::before': {
+                content: '""',
+                position: 'absolute',
+                bottom: 0,
+                left: 0,
+                width: '100%',
+                height: '2px',
+                backgroundColor: theme.palette.primary.main,
+                transform: 'scaleX(0)',
+                transformOrigin: 'right',
+                transition: theme.transitions.create('transform', {
+                  duration: theme.transitions.duration.standard,
+                  easing: theme.transitions.easing.easeInOut,
+                }),
+              },
+              '&:hover::before': {
+                transform: 'scaleX(1)',
+                transformOrigin: 'left',
+              },
+              textTransform: 'none',
+              fontWeight: 'medium',
+              fontSize: '1rem',
+              padding: '6px 8px',
+            },
+          }}
+        >
+          <NavItem
+            title={'SERVICES'}
+            id={'services-menu'}
+            items={[
+              { title: 'OUR SERVICES', href: '/Services' },
+              { title: 'SALESFORCE', href: '/Salesforce' },
+              { title: 'AI', href: '/Ai' },
+              ...secondaryPages,
+            ]}
+            colorInvert={colorInvert}
+            hoverMenu={true}
+          />
+        </Box>
         <Box marginLeft={4}>
-        <Link href="ContactUs" passHref>
-  <Button
-    component="a"
-    sx={{
-      color: colorInvert ? 'common.white' : 'text.primary',
-      position: 'relative',
-      overflow: 'hidden',
-      '&:hover': {
-        backgroundColor: 'transparent',
-        '&::before': {
-          transform: 'scaleX(1)',
-          transformOrigin: 'left'
-        },
-        '& .button-text': {
-          color: theme.palette.primary.main,
-          fontWeight: 600
-        }
-      },
-      '&::before': {
-        content: '""',
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        width: '100%',
-        height: '2px',
-        backgroundColor: theme.palette.primary.main,
-        transform: 'scaleX(0)',
-        transformOrigin: 'right',
-        transition: theme.transitions.create('transform', {
-          duration: theme.transitions.duration.standard,
-          easing: theme.transitions.easing.easeInOut
-        })
-      },
-      textTransform: 'none',
-      textDecoration: 'none',
-      fontWeight: 'medium',
-      fontSize: '1rem',
-      padding: '6px 8px',
-      borderRadius: 0, // Sharp corners for modern look
-      minWidth: 'auto' // Remove extra button padding
-    }}
-  >
-    <Box 
-      component="span" 
-      className="button-text"
-      sx={{
-        transition: theme.transitions.create(['color', 'font-weight'], {
-          duration: theme.transitions.duration.shorter,
-          easing: theme.transitions.easing.easeOut
-        }),
-        display: 'inline-block',
-        position: 'relative',
-        zIndex: 1,
-        whiteSpace: 'nowrap',
-      }}
-    >
-      CONTACT US
-    </Box>
-  </Button>
-</Link>
+          <Link href="ContactUs" passHref>
+            <Button
+              component="a"
+              sx={{
+                color: colorInvert ? 'common.white' : 'text.primary',
+                position: 'relative',
+                overflow: 'hidden',
+                '&:hover': {
+                  backgroundColor: 'transparent',
+                  '&::before': {
+                    transform: 'scaleX(1)',
+                    transformOrigin: 'left',
+                  },
+                  '& .button-text': {
+                    color: theme.palette.primary.main,
+                    fontWeight: 600,
+                  },
+                },
+                '&::before': {
+                  content: '""',
+                  position: 'absolute',
+                  bottom: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '2px',
+                  backgroundColor: theme.palette.primary.main,
+                  transform: 'scaleX(0)',
+                  transformOrigin: 'right',
+                  transition: theme.transitions.create('transform', {
+                    duration: theme.transitions.duration.standard,
+                    easing: theme.transitions.easing.easeInOut,
+                  }),
+                },
+                textTransform: 'none',
+                textDecoration: 'none',
+                fontWeight: 'medium',
+                fontSize: '1rem',
+                padding: '6px 8px',
+                borderRadius: 0, // Sharp corners for modern look
+                minWidth: 'auto', // Remove extra button padding
+              }}
+            >
+              <Box
+                component="span"
+                className="button-text"
+                sx={{
+                  transition: theme.transitions.create(
+                    ['color', 'font-weight'],
+                    {
+                      duration: theme.transitions.duration.shorter,
+                      easing: theme.transitions.easing.easeOut,
+                    },
+                  ),
+                  display: 'inline-block',
+                  position: 'relative',
+                  zIndex: 1,
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                CONTACT US
+              </Box>
+            </Button>
+          </Link>
         </Box>
         {/* <Box marginLeft={4}>
         <Link href="Salesforce" passHref>
@@ -405,8 +409,8 @@ const Topbar = ({
       minWidth: 'auto' // Remove extra button padding
     }}
   >
-    <Box 
-      component="span" 
+    <Box
+      component="span"
       className="button-text"
       sx={{
         transition: theme.transitions.create(['color', 'font-weight'], {
@@ -466,8 +470,8 @@ const Topbar = ({
       minWidth: 'auto' // Remove extra button padding
     }}
   >
-    <Box 
-      component="span" 
+    <Box
+      component="span"
       className="button-text"
       sx={{
         transition: theme.transitions.create(['color', 'font-weight'], {
@@ -482,70 +486,73 @@ const Topbar = ({
       AI
     </Box>
   </Button>
-</Link>           
+</Link>
         </Box> */}
         <Box marginLeft={4}>
-        <Link href="https://techineur.com/Techineur%20Solutions.pdf" passHref>
-  <Button
-    component="a"
-    sx={{
-      color: colorInvert ? 'common.white' : 'text.primary',
-      position: 'relative',
-      overflow: 'hidden',
-      '&:hover': {
-        backgroundColor: 'transparent',
-        '&::before': {
-          transform: 'scaleX(1)',
-          transformOrigin: 'left'
-        },
-        '& .button-text': {
-          color: theme.palette.primary.main,
-          fontWeight: 600
-        }
-      },
-      '&::before': {
-        content: '""',
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        width: '100%',
-        height: '2px',
-        backgroundColor: theme.palette.primary.main,
-        transform: 'scaleX(0)',
-        transformOrigin: 'right',
-        transition: theme.transitions.create('transform', {
-          duration: theme.transitions.duration.standard,
-          easing: theme.transitions.easing.easeInOut
-        })
-      },
-      textTransform: 'none',
-      textDecoration: 'none',
-      fontWeight: 'medium',
-      fontSize: '1rem',
-      padding: '6px 8px',
-      borderRadius: 0, // Sharp corners for modern look
-      minWidth: 'auto' // Remove extra button padding
-    }}
-  >
-    <Box 
-      component="span" 
-      className="button-text"
-      sx={{
-        transition: theme.transitions.create(['color', 'font-weight'], {
-          duration: theme.transitions.duration.shorter,
-          easing: theme.transitions.easing.easeOut
-        }),
-        display: 'inline-block',
-        position: 'relative',
-        zIndex: 1
-      }}
-    >
-      PORTFOLIO
-    </Box>
-  </Button>
-</Link>
+          <Link href="https://techineur.com/Techineur%20Solutions.pdf" passHref>
+            <Button
+              component="a"
+              sx={{
+                color: colorInvert ? 'common.white' : 'text.primary',
+                position: 'relative',
+                overflow: 'hidden',
+                '&:hover': {
+                  backgroundColor: 'transparent',
+                  '&::before': {
+                    transform: 'scaleX(1)',
+                    transformOrigin: 'left',
+                  },
+                  '& .button-text': {
+                    color: theme.palette.primary.main,
+                    fontWeight: 600,
+                  },
+                },
+                '&::before': {
+                  content: '""',
+                  position: 'absolute',
+                  bottom: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '2px',
+                  backgroundColor: theme.palette.primary.main,
+                  transform: 'scaleX(0)',
+                  transformOrigin: 'right',
+                  transition: theme.transitions.create('transform', {
+                    duration: theme.transitions.duration.standard,
+                    easing: theme.transitions.easing.easeInOut,
+                  }),
+                },
+                textTransform: 'none',
+                textDecoration: 'none',
+                fontWeight: 'medium',
+                fontSize: '1rem',
+                padding: '6px 8px',
+                borderRadius: 0, // Sharp corners for modern look
+                minWidth: 'auto', // Remove extra button padding
+              }}
+            >
+              <Box
+                component="span"
+                className="button-text"
+                sx={{
+                  transition: theme.transitions.create(
+                    ['color', 'font-weight'],
+                    {
+                      duration: theme.transitions.duration.shorter,
+                      easing: theme.transitions.easing.easeOut,
+                    },
+                  ),
+                  display: 'inline-block',
+                  position: 'relative',
+                  zIndex: 1,
+                }}
+              >
+                PORTFOLIO
+              </Box>
+            </Button>
+          </Link>
         </Box>
-        <ThemeModeToggler/>
+        <ThemeModeToggler />
 
         {/* <Box marginLeft={4}>
           <NavItem
@@ -555,7 +562,7 @@ const Topbar = ({
             colorInvert={colorInvert}
           />
         </Box>
-        
+
         {/* <Box marginLeft={4}>
           <Button
             variant="contained"
@@ -584,14 +591,13 @@ const Topbar = ({
           <MenuIcon />
         </Button>
       </Box>
-      <Box display={'flex'} justifyContent={'flex-end'} alignItems={'center'}>
-            
-            
-          </Box>
+      <Box
+        display={'flex'}
+        justifyContent={'flex-end'}
+        alignItems={'center'}
+      ></Box>
     </Box>
-    
   );
 };
 
 export default Topbar;
-

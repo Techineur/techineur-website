@@ -1,15 +1,16 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { motion } from 'framer-motion';
+import React from 'react';
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 const Loading = () => {
   const router = useRouter();
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      router.push("/home");
+      router.push('/home');
     }, 3000);
     return () => clearTimeout(timer);
   }, [router]);
@@ -27,11 +28,11 @@ const Loading = () => {
               transition: {
                 duration: 1.2,
                 repeat: Infinity,
-                ease: "linear"
-              }
+                ease: 'linear',
+              },
             }}
           />
-          
+
           {/* Inner circle (rotates counter-clockwise) */}
           <motion.div
             className="absolute inset-0 border-4 border-cyan-400 border-b-transparent rounded-full opacity-80"
@@ -40,8 +41,8 @@ const Loading = () => {
               transition: {
                 duration: 1.5,
                 repeat: Infinity,
-                ease: "linear"
-              }
+                ease: 'linear',
+              },
             }}
           />
         </div>
@@ -59,8 +60,8 @@ const Loading = () => {
               opacity: [0, 1, 0],
               transition: {
                 duration: 1.5,
-                repeat: Infinity
-              }
+                repeat: Infinity,
+              },
             }}
           >
             ...

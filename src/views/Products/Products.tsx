@@ -1,22 +1,11 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import { useTheme } from '@mui/material/styles';
 
 import Main from 'layouts/Main';
 import Container from 'components/Container';
-import {
-  Hero,
-  OurProducts,
-//   SearchBox,
-//   FeaturedArticle,
-//   LastStories,
-//   CaseStudies,
-//   PopularArticles,
-//   Newsletter,
-} from './Components';
+import { Hero, OurProducts } from './Components';
 
 const Products = (): JSX.Element => {
-  const theme = useTheme();
   return (
     <Main colorInvert={true}>
       <Box bgcolor={'alternate.main'} position={'relative'}>
@@ -29,7 +18,7 @@ const Products = (): JSX.Element => {
             paddingY: '0 !important',
           }}
         > */}
-          {/* <SearchBox />
+        {/* <SearchBox />
         </Container>
         <Container>
           <FeaturedArticle />
@@ -67,11 +56,10 @@ const Products = (): JSX.Element => {
             d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"
           ></path>
         </Box> */}
-       </Box>
-       <Container>
-        <OurProducts/>
-      </Container> 
-      
+      </Box>
+      <Container>
+        <OurProducts />
+      </Container>
     </Main>
   );
 };
