@@ -1072,7 +1072,7 @@ const OurProducts = (): JSX.Element => {
                   <Grid container spacing={3}>
                     {selectedProduct.details.additionalImages.map(
                       (img, index) => (
-                        <Grid size={{ xs: 12 }} sm={6} key={index}>
+                        <Grid size={{ xs: 12, sm: 6 }} key={index}>
                           <Box
                             sx={{
                               p: 1,
