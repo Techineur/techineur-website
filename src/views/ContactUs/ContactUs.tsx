@@ -37,7 +37,7 @@ const ContactUs = (): JSX.Element => {
             <LatestStories />
           </Grid>
           {isMd ? (
-            <Grid size={{ xs: 12 }} md={4}>
+            <Grid size={{ xs: 12,  sm:6, md:4 }}>
               <SidebarArticles />
             </Grid>
           ) : null}
@@ -49,7 +49,7 @@ const ContactUs = (): JSX.Element => {
             <Grid size={{ xs: 12 }} md={8}>
               <MostViewedArticles />
             </Grid>
-            <Grid size={{ xs: 12 }} md={4}>
+            <Grid size={{ xs: 12,  sm:6, md:4 }}>
               <SidebarNewsletter />
             </Grid>
           </Grid>

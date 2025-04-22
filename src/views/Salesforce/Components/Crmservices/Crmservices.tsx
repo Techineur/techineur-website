@@ -79,7 +79,7 @@ const mock: Product[] = [
           <Typography variant="h6" gutterBottom sx={{ mb: 2, fontWeight: 600 }}>
             Our Approach
           </Typography>
-          <Typography paragraph>
+          <Typography variant="body1">
             We don&apos;t simply provide solutions with our Salesforce
             Consulting Services; we also design a transformative journey suited
             to your specific business demands. Our certified Salesforce
@@ -91,7 +91,7 @@ const mock: Product[] = [
             functions as planned.
           </Typography>
 
-          <Typography paragraph>
+          <Typography variant="body1">
             Our Salesforce consultants prioritize improving your current
             workflows while leaving room for future scalability, ensuring your
             CRM solution adapts to changing market demands. By understanding
@@ -109,7 +109,7 @@ const mock: Product[] = [
           </Typography>
 
           <Grid container spacing={3} sx={{ mt: 2 }}>
-            <Grid size={{ xs: 12 }} md={4}>
+            <Grid size={{ xs: 12, sm: 6, md: 4 }}>
               <Box
                 sx={{
                   p: 3,
@@ -154,7 +154,7 @@ const mock: Product[] = [
               </Box>
             </Grid>
 
-            <Grid size={{ xs: 12 }} md={4}>
+            <Grid size={{ xs: 12, sm: 6, md: 4 }}>
               <Box
                 sx={{
                   p: 3,
@@ -200,7 +200,7 @@ const mock: Product[] = [
               </Box>
             </Grid>
 
-            <Grid size={{ xs: 12 }} md={4}>
+            <Grid size={{ xs: 12, sm: 6, md: 4 }}>
               <Box
                 sx={{
                   p: 3,
@@ -274,7 +274,7 @@ const mock: Product[] = [
           <Typography variant="h6" gutterBottom sx={{ mb: 2, fontWeight: 600 }}>
             Our Implementation Services
           </Typography>
-          <Typography paragraph>
+          <Typography variant="body1">
             Techineur provides assistance in Salesforce implementation services
             and customization to fit your specific business requirements. Our
             Salesforce implementation services include configuration,
@@ -294,7 +294,7 @@ const mock: Product[] = [
           >
             Benefits of Salesforce® Implementation Services by Techineur
           </Typography>
-          <Typography paragraph>
+          <Typography variant="body1">
             With our Salesforce implementation services, businesses reap a range
             of benefits such as:
           </Typography>
@@ -340,7 +340,7 @@ const mock: Product[] = [
           >
             Our Salesforce® Implementation Process
           </Typography>
-          <Typography paragraph>
+          <Typography variant="body1">
             Have you ever wondered what are the stages in implementing
             Salesforce CRM in a business? We have listed below in detail the
             stage-by-stage process followed using best practices and the latest
@@ -700,7 +700,7 @@ const mock: Product[] = [
           <Typography variant="h6" gutterBottom sx={{ mb: 2, fontWeight: 600 }}>
             Our Integration Approach
           </Typography>
-          <Typography paragraph>
+          <Typography variant="body1">
             We at Techineur, a Salesforce integration partner understand that a
             company must keep pace with the times. Therefore, to this end, you
             don&apos;t need to overhaul your business ways but just alter your
@@ -708,7 +708,7 @@ const mock: Product[] = [
             Integration Services that can smoothen your daily workflow as well
             as speed up matters.
           </Typography>
-          <Typography paragraph>
+          <Typography variant="body1">
             As one of the best Salesforce Integration Partners, we successfully
             provide secure, reliable, seamless, and scalable Salesforce
             Integration Services with current apps and external cloud services.
@@ -726,7 +726,7 @@ const mock: Product[] = [
           >
             Salesforce® Integration Services
           </Typography>
-          <Typography paragraph>
+          <Typography variant="body1">
             We, as a Salesforce Integration Partner offering Salesforce
             Integration Services, believe that all systems in a business should
             work in synchronisation with all the departments of a firm. This
@@ -737,7 +737,7 @@ const mock: Product[] = [
           </Typography>
 
           <Grid container spacing={3} sx={{ mt: 2, mb: 4 }}>
-            <Grid size={{ xs: 12 }} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <Box
                 sx={{
                   p: 3,
@@ -807,7 +807,7 @@ const mock: Product[] = [
                 </Box>
               </Box>
             </Grid>
-            <Grid size={{ xs: 12 }} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <Box
                 sx={{
                   p: 3,
@@ -821,20 +821,20 @@ const mock: Product[] = [
                 <Typography variant="h6" sx={{ fontWeight: 600, mb: 2 }}>
                   Challenges We Solve
                 </Typography>
-                <Typography paragraph>
+                <Typography variant="body1">
                   Salesforce Integration and data migration can prove to be a
                   headache if you are not aware of all the processes involved.
                   Without a thorough understanding and Salesforce Integration
                   services, it can lead to unwanted situations and failures
                   which are best avoided.
                 </Typography>
-                <Typography paragraph>
+                <Typography variant="body1">
                   Our Salesforce integration consultants curate the best
                   Salesforce integration services plan and help you with
                   projects of any difficulty, including overcoming the following
                   hurdles:
                 </Typography>
-                <Typography paragraph>
+                <Typography variant="body1">
                   - Data synchronization issues
                   <br />
                   - System compatibility problems
@@ -868,11 +868,11 @@ const mock: Product[] = [
               How Salesforce® Partners streamlined customer and dealer service
               operations
             </Typography>
-            <Typography paragraph sx={{ mb: 1 }}>
+            <Typography variant="body1" sx={{ mb: 1 }}>
               - 35% faster order delivery
               <br />- 90% customer satisfaction rate
             </Typography>
-            <Typography paragraph>
+            <Typography variant="body1">
               Launched a single cloud based platform, accessible via mobile
               platforms and the desktop, for both support and sales functions
               and streamlined processes between the groups. Implemented
@@ -889,7 +889,7 @@ const mock: Product[] = [
             Why Choose Techineur for Salesforce® Integration
           </Typography>
           <Grid container spacing={3}>
-            <Grid size={{ xs: 12 }} md={4}>
+            <Grid size={{ xs: 12, sm: 6, md: 4 }}>
               <Box
                 sx={{
                   p: 3,
@@ -911,7 +911,7 @@ const mock: Product[] = [
                 </Typography>
               </Box>
             </Grid>
-            <Grid size={{ xs: 12 }} md={4}>
+            <Grid size={{ xs: 12, sm: 6, md: 4 }}>
               <Box
                 sx={{
                   p: 3,
@@ -932,7 +932,7 @@ const mock: Product[] = [
                 </Typography>
               </Box>
             </Grid>
-            <Grid size={{ xs: 12 }} md={4}>
+            <Grid size={{ xs: 12, sm: 6, md: 4 }}>
               <Box
                 sx={{
                   p: 3,
@@ -968,7 +968,7 @@ const mock: Product[] = [
             <Typography variant="h6" sx={{ fontWeight: 600, mb: 2 }}>
               Need Consultations in Salesforce® Integration Services?
             </Typography>
-            <Typography paragraph sx={{ mb: 3 }}>
+            <Typography variant="body1" sx={{ mb: 3 }}>
               Our Salesforce integration consultants are suitably armed to
               understand our client&apos;s integration requirements and provide
               appropriate solutions accordingly.
@@ -1040,7 +1040,7 @@ const mock: Product[] = [
             Our Development Services
           </Typography>
           <Typography
-            paragraph
+            variant="body1"
             sx={{
               position: 'relative',
               pl: 3,
@@ -1057,7 +1057,7 @@ const mock: Product[] = [
             features and functions.
           </Typography>
           <Typography
-            paragraph
+            variant="body1"
             sx={{
               position: 'relative',
               pl: 3,
@@ -1409,7 +1409,7 @@ const mock: Product[] = [
               { number: '9', title: 'Commented Code' },
               { number: '10', title: 'Data Masking' },
             ].map((item, index) => (
-              <Grid size={{ xs: 12 }} sm={6} md={4} key={index}>
+              <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
                 <Box
                   sx={{
                     p: 3,
@@ -1496,7 +1496,7 @@ const mock: Product[] = [
             Introduction to Salesforce Marketing Cloud Staffing Services
           </Typography>
           <Typography
-            paragraph
+            variant="body1"
             sx={{
               position: 'relative',
               pl: 3,
@@ -1573,7 +1573,7 @@ const mock: Product[] = [
                 color: theme.palette.info.main,
               },
             ].map((benefit, index) => (
-              <Grid size={{ xs: 12 }} sm={6} md={3} key={index}>
+              <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
                 <Box
                   sx={{
                     p: 3,
@@ -1679,7 +1679,7 @@ const mock: Product[] = [
 
           {/* Services List */}
           <Grid container spacing={3}>
-            <Grid size={{ xs: 12 }} md={4}>
+            <Grid size={{ xs: 12, sm: 6, md: 4 }}>
               <Box
                 sx={{
                   p: 3,
@@ -1702,7 +1702,7 @@ const mock: Product[] = [
                 </Typography>
               </Box>
             </Grid>
-            <Grid size={{ xs: 12 }} md={4}>
+            <Grid size={{ xs: 12, sm: 6, md: 4 }}>
               <Box
                 sx={{
                   p: 3,
@@ -1725,7 +1725,7 @@ const mock: Product[] = [
                 </Typography>
               </Box>
             </Grid>
-            <Grid size={{ xs: 12 }} md={4}>
+            <Grid size={{ xs: 12, sm: 6, md: 4 }}>
               <Box
                 sx={{
                   p: 3,
@@ -1799,7 +1799,7 @@ const mock: Product[] = [
             Why Migrate from Classic to Lightning?
           </Typography>
           <Typography
-            paragraph
+            variant="body1"
             sx={{
               position: 'relative',
               pl: 3,
@@ -1832,7 +1832,7 @@ const mock: Product[] = [
             <Typography variant="h6" sx={{ fontWeight: 600, mb: 1 }}>
               Don&apos;t Wait - The Time to Migrate is Now
             </Typography>
-            <Typography paragraph>
+            <Typography variant="body1">
               The debate is futile because all those currently using Salesforce
               Classic will have to opt for Salesforce Lightning Migration. This
               is because the classic version is being phased out sooner or
@@ -1904,7 +1904,7 @@ const mock: Product[] = [
                 content: 'Enhanced tools for team collaboration',
               },
             ].map((item, index) => (
-              <Grid size={{ xs: 12 }} sm={6} md={4} key={index}>
+              <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
                 <Box
                   sx={{
                     p: 3,
@@ -1962,7 +1962,7 @@ const mock: Product[] = [
             >
               Our Lightning Migration Approach
             </Typography>
-            <Typography paragraph>
+            <Typography variant="body1">
               We make your Salesforce Classic to Lightning migration simpler,
               quicker, and more economical. While UI upgrade is important,
               Lightning enables businesses to be more customer-centric thanks to
@@ -1972,7 +1972,7 @@ const mock: Product[] = [
             </Typography>
 
             <Grid container spacing={2} sx={{ mt: 2 }}>
-              <Grid size={{ xs: 12 }} md={6}>
+              <Grid size={{ xs: 12, md: 6 }}>
                 <Box sx={{ display: 'flex', gap: 2, mb: 2 }}>
                   <Box
                     sx={{
@@ -2015,7 +2015,7 @@ const mock: Product[] = [
                   </Typography>
                 </Box>
               </Grid>
-              <Grid size={{ xs: 12 }} md={6}>
+              <Grid size={{ xs: 12, md: 6 }}>
                 <Box sx={{ display: 'flex', gap: 2, mb: 2 }}>
                   <Box
                     sx={{
@@ -2076,7 +2076,7 @@ const mock: Product[] = [
             <Typography variant="h6" sx={{ fontWeight: 600, mb: 2 }}>
               Ready to Modernize Your Salesforce Platform?
             </Typography>
-            <Typography paragraph sx={{ mb: 3 }}>
+            <Typography variant="body1" sx={{ mb: 3 }}>
               We have successfully helped businesses across the country migrate
               to the present & future of Salesforce – The Lightning version.
               Isn&apos;t it time you also took advantage of our excellent
@@ -2108,8 +2108,8 @@ const Crmservices = (): JSX.Element => {
   const [open, setOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [buttonHovered, setButtonHovered] = useState(false);
+
+  const [, setButtonHovered] = useState(false);
 
   const handleOpen = (product: Product) => {
     setSelectedProduct(product);
@@ -2153,7 +2153,7 @@ const Crmservices = (): JSX.Element => {
 
       <Grid container spacing={4} sx={{ px: { xs: 2, sm: 4, md: 6 } }}>
         {mock.map((item, i) => (
-          <Grid size={{ xs: 12 }} sm={6} md={4} key={i}>
+          <Grid size={{ xs: 12, sm: 6, md: 4 }} key={i}>
             <Box
               onMouseEnter={() => setHoveredCard(i)}
               onMouseLeave={() => setHoveredCard(null)}
@@ -2441,7 +2441,7 @@ const Crmservices = (): JSX.Element => {
               </Box>
 
               <Grid container spacing={4}>
-                <Grid size={{ xs: 12 }} md={6}>
+                <Grid size={{ xs: 12, md: 6 }}>
                   <Box
                     sx={{
                       mb: 4,
@@ -2540,7 +2540,7 @@ const Crmservices = (): JSX.Element => {
                     </Box>
                   </Box>
                 </Grid>
-                <Grid size={{ xs: 12 }} md={6}>
+                <Grid size={{ xs: 12, md: 6 }}>
                   <Box
                     sx={{
                       height: '100%',

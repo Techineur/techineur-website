@@ -212,7 +212,7 @@ const Advantages = (): JSX.Element => {
       <Box>
         <Grid container spacing={4}>
           {mock.map((item, i) => (
-            <Grid size={{ xs: 12 }} sm={6} md={4} key={i}>
+            <Grid size={{ xs: 12, sm: 6, md: 4 }} key={i}>
               <Box
                 component={Card}
                 padding={4}

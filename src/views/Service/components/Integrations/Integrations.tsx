@@ -50,7 +50,7 @@ const Integrations = (): JSX.Element => {
             ))}
           </Box>
         </Grid>
-        <Grid size={{ xs: 12 }} md={3}>
+        <Grid size={{ xs: 12, md: 3 }}>
           <Box>
             <Typography
               variant={'h1'}
