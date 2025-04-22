@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { JSX } from 'react';
 import { useTheme } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';

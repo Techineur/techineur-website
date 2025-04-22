@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { JSX } from 'react';
 import Slider from 'react-slick';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -65,9 +65,9 @@ const Partners = (): JSX.Element => {
         marginRight: '-50vw',
         overflow: 'hidden',
         py: 8,
-        background: `linear-gradient(90deg, 
-          ${theme.palette.background.paper} 0%, 
-          ${theme.palette.primary.light} 50%, 
+        background: `linear-gradient(90deg,
+          ${theme.palette.background.paper} 0%,
+          ${theme.palette.primary.light} 50%,
           ${theme.palette.background.paper} 100%)`,
       }}
     >
@@ -78,8 +78,8 @@ const Partners = (): JSX.Element => {
           left: 0,
           right: 0,
           bottom: 0,
-          background: `radial-gradient(circle at center, 
-            ${theme.palette.primary.main}20 0%, 
+          background: `radial-gradient(circle at center,
+            ${theme.palette.primary.main}20 0%,
             transparent 70%)`,
           zIndex: 0,
         }}

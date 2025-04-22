@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { JSX } from 'react';
 
 import Main from 'layouts/Main';
 import Container from 'components/Container';

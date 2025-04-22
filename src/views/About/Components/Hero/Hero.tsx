@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { JSX, useEffect } from 'react';
 import { alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';

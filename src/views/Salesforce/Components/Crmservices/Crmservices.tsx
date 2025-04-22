@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { JSX, useState } from 'react';
 import { useTheme, alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
