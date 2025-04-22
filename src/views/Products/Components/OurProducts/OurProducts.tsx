@@ -110,19 +110,25 @@ const mock: Product[] = [
   },
   {
     image: 'https://assets.maccarianagency.com/backgrounds/img24.jpg',
-    description: 'Comprehensive spa management solution for appointment booking and operations',
-    title: 'SPA Management',
+    description: 'Comprehensive telehealth solution connecting patients with healthcare providers',
+    title: 'eTeleHealth Application',
     details: {
-      description: 'End-to-end spa business management platform',
+      description: 'A complete healthcare management platform for patients and providers',
       features: [
-        'Appointment scheduling',
-        'Customer check-in system',
-        'Payment processing',
-        'Staff management',
-        'Multi-location support',
-        'Integrated POS system',
-        'Automated email receipts',
-        'Client history tracking'
+        'Cross-platform Flutter application',
+        'Digital forms with client-side validation',
+        'Health plan information dashboard',
+        'Dependent registration system',
+        'QR code generation for access',
+        'Face-to-face consultation approval',
+        'In-app doctor chat feature',
+        'Lab/diagnostic test approvals',
+        'Rapid Antibody Testing scheduling',
+        'Maternity benefits tracking',
+        'Utilization tracking system',
+        'Reimbursement status tracking',
+        'Healthcare provider search',
+        'MediCard Perks for discounts'
       ],
       additionalImages: [
         'https://techineur.com/assets/img/products/spa/1.png',
@@ -133,13 +139,13 @@ const mock: Product[] = [
       <>
         <Box mt={4}>
           <Typography variant="h6" gutterBottom>
-            Complete Spa Management Solution
+            Complete Healthcare Management Solution
           </Typography>
           
           <Typography paragraph>
-            Our application is designed to help Spa management teams handle the entire customer journey:
-            booking appointments, customer check-in, treatment management, check-out, billing, 
-            emailing invoices, payment collection, and maintaining customer history.
+            Our application transforms healthcare services by providing end-to-end digital solutions:
+            appointment scheduling, test result visibility, billing transparency, and seamless
+            communication between patients and providers.
           </Typography>
 
           <Box sx={{ 
@@ -152,14 +158,14 @@ const mock: Product[] = [
               Core Functionality:
             </Typography>
             <ul>
-              <li><Typography>Streamlined appointment software makes scheduling easy</Typography></li>
-              <li><Typography>Block time off and accept online booking appointments</Typography></li>
-              <li><Typography>View all therapists availability on demand</Typography></li>
-              <li><Typography>Schedule appointments based on availability</Typography></li>
-              <li><Typography>Multi-Tenancy support for 25+ spa locations</Typography></li>
-              <li><Typography>Integrated Spa point of sale (POS) system</Typography></li>
-              <li><Typography>Process credit card transactions with mobile reader</Typography></li>
-              <li><Typography>Automated email receipts to reduce paper use</Typography></li>
+              <li><Typography>Single codebase Flutter application for cross-platform accessibility</Typography></li>
+              <li><Typography>Digital forms with instant validation to replace paper processes</Typography></li>
+              <li><Typography>Centralized dashboard for health plan information</Typography></li>
+              <li><Typography>Easy dependent registration with minimal steps</Typography></li>
+              <li><Typography>QR code generation for quick facility access</Typography></li>
+              <li><Typography>Streamlined approval system for consultations</Typography></li>
+              <li><Typography>Integrated chat for virtual doctor consultations</Typography></li>
+              <li><Typography>Automated test approval workflows</Typography></li>
             </ul>
           </Box>
 
@@ -170,13 +176,13 @@ const mock: Product[] = [
             mb: 3
           }}>
             <Typography variant="subtitle1" gutterBottom sx={{ fontWeight: 600 }}>
-              Client Management:
+              Patient Benefits:
             </Typography>
             <ul>
-              <li><Typography>View full client history including past services</Typography></li>
-              <li><Typography>Track upcoming appointments</Typography></li>
-              <li><Typography>Send texts or emails directly from the app</Typography></li>
-              <li><Typography>Maintain up-to-date client records</Typography></li>
+              <li><Typography>View all test results and medical history in one place</Typography></li>
+              <li><Typography>Track appointment status and healthcare utilization</Typography></li>
+              <li><Typography>Manage dependents' healthcare needs with consent</Typography></li>
+              <li><Typography>Access exclusive MediCard perks and discounts</Typography></li>
             </ul>
           </Box>
 
@@ -186,14 +192,14 @@ const mock: Product[] = [
             borderRadius: 2
           }}>
             <Typography variant="subtitle1" gutterBottom sx={{ fontWeight: 600 }}>
-              Business Benefits:
+              Healthcare Outcomes:
             </Typography>
             <ul>
-              <li><Typography>Increase daily bookings and boost sales</Typography></li>
-              <li><Typography>Eliminate empty seats and time slots</Typography></li>
-              <li><Typography>Attract new customers with last-minute deals</Typography></li>
-              <li><Typography>Mobile device compatible - no expensive software needed</Typography></li>
-              <li><Typography>Improve customer retention with better service</Typography></li>
+              <li><Typography>80% reduction in paperwork and manual processes</Typography></li>
+              <li><Typography>65% improvement in patient engagement</Typography></li>
+              <li><Typography>75% faster appointment scheduling</Typography></li>
+              <li><Typography>40% increase in provider efficiency</Typography></li>
+              <li><Typography>Complete digitization of healthcare workflows</Typography></li>
             </ul>
           </Box>
         </Box>
@@ -202,19 +208,19 @@ const mock: Product[] = [
   },
   {
     image: 'https://assets.maccarianagency.com/backgrounds/img25.jpg',
-    description: 'Field sales management application for tracking customer visits',
-    title: 'Sales Order App',
+    description: 'Digital platform connecting devotees with temples and spiritual services',
+    title: 'Temple Connect Application',
     details: {
-      description: 'Mobile solution for field sales teams',
+      description: 'Comprehensive digital solution for temple management and devotee engagement',
       features: [
-        'Customer visit tracking',
-        'GPS position monitoring',
-        'Timesheet and expense recording',
-        'Photo reports and visit notes',
-        'Route optimization',
-        'Real-time reporting',
-        'Mileage tracking',
-        'Offline capability'
+        'Temple history and significance overview',
+        'E-Store for purchasing Prasad and items',
+        'Secure donation portal with receipts',
+        'Community discussion forums',
+        'Digital library of shlokas/chants',
+        'Real-time event notifications',
+        'Special ceremony booking',
+        'Virtual darshan options'
       ],
       additionalImages: [
         'https://techineur.com/assets/img/products/salesorder/1.png'
@@ -224,12 +230,12 @@ const mock: Product[] = [
       <>
         <Box mt={4}>
           <Typography variant="h6" gutterBottom>
-            Field Sales Management Solution
+            Temple Management Solution
           </Typography>
           
           <Typography paragraph>
-            This application helps managers track field representatives' customer visits through 
-            smartphones, with real-time GPS tracking and comprehensive visit reporting.
+            This application bridges traditional temple practices with modern technology,
+            enabling devotees to connect spiritually regardless of geographical constraints.
           </Typography>
 
           <Box sx={{ 
@@ -239,16 +245,16 @@ const mock: Product[] = [
             mb: 3
           }}>
             <Typography variant="subtitle1" gutterBottom sx={{ fontWeight: 600 }}>
-              Manager Dashboard:
+              Temple Administration:
             </Typography>
             <ul>
-              <li><Typography>View reps GPS positions in real-time</Typography></li>
-              <li><Typography>Monitor check-in times at each location</Typography></li>
-              <li><Typography>Track visit completion status</Typography></li>
-              <li><Typography>Review timesheets, expenses, and mileage</Typography></li>
-              <li><Typography>Access photo reports and visit notes</Typography></li>
-              <li><Typography>Generate performance analytics</Typography></li>
-              <li><Typography>Optimize territory assignments</Typography></li>
+              <li><Typography>Manage events and ceremony schedules</Typography></li>
+              <li><Typography>Process online donations with transparency</Typography></li>
+              <li><Typography>Update devotees with push notifications</Typography></li>
+              <li><Typography>Handle Prasad and item orders efficiently</Typography></li>
+              <li><Typography>Maintain digital records of transactions</Typography></li>
+              <li><Typography>Monitor community engagement metrics</Typography></li>
+              <li><Typography>Manage volunteer coordination</Typography></li>
             </ul>
           </Box>
 
@@ -258,16 +264,16 @@ const mock: Product[] = [
             borderRadius: 2
           }}>
             <Typography variant="subtitle1" gutterBottom sx={{ fontWeight: 600 }}>
-              Field Representative Tools:
+              Devotee Features:
             </Typography>
             <ul>
-              <li><Typography>Plan and optimize customer routes</Typography></li>
-              <li><Typography>Record mileage and business expenses</Typography></li>
-              <li><Typography>Capture and share photos/notes during visits</Typography></li>
-              <li><Typography>Check-in/check-out at customer locations</Typography></li>
-              <li><Typography>Submit orders directly from the field</Typography></li>
-              <li><Typography>Access customer history and preferences</Typography></li>
-              <li><Typography>Work offline with automatic sync when connected</Typography></li>
+              <li><Typography>Book slots for special ceremonies</Typography></li>
+              <li><Typography>Make secure donations online</Typography></li>
+              <li><Typography>Purchase religious items and Prasad</Typography></li>
+              <li><Typography>Participate in community discussions</Typography></li>
+              <li><Typography>Access learning resources and tutorials</Typography></li>
+              <li><Typography>Receive event reminders and updates</Typography></li>
+              <li><Typography>Experience virtual darshan when unable to visit</Typography></li>
             </ul>
           </Box>
         </Box>
@@ -276,18 +282,21 @@ const mock: Product[] = [
   },
   {
     image: 'https://assets.maccarianagency.com/backgrounds/img23.jpg',
-    description: 'Employees can capture their expenses while on move and submit the expense report for approval to the manager.',
-    title: 'EXPENSES',
+    description: 'Comprehensive platform for selling and managing financial education courses',
+    title: 'FinEd - Financial Course Sales',
     details: {
-      description: 'A comprehensive expense management solution for employees on the go.',
+      description: 'A complete e-learning solution for financial education providers and students',
       features: [
-        'Expense capture with receipt scanning',
-        'Automatic categorization',
-        'Policy compliance checks',
-        'Multi-level approval workflows',
-        'Real-time reporting',
-        'Integration with accounting systems',
-        'Mobile and web access'
+        'Instructor course dashboard',
+        'Real-time student chat',
+        'Advanced course browsing',
+        'Shopping cart system',
+        'Course discussion forums',
+        'Bookmarking capability',
+        'Completion certificates',
+        'Multi-device responsive design',
+        'Personalized recommendations',
+        'Secure payment processing'
       ],
       additionalImages: [
         'https://www.techineur.com/assets/img/products/expenses/1.png',
@@ -298,7 +307,7 @@ const mock: Product[] = [
       <>
         <Box mt={4}>
           <Typography variant="h6" gutterBottom sx={{ mb: 3 }}>
-            Expense Management Process
+            Course Platform Process
           </Typography>
           
           <Box sx={{ 
@@ -312,11 +321,11 @@ const mock: Product[] = [
               How It Works:
             </Typography>
             <Box component="ol" sx={{ pl: 2 }}>
-              <li><Typography>Capture expenses with receipts using mobile camera</Typography></li>
-              <li><Typography>Categorize expenses by type (travel, meals, etc.)</Typography></li>
-              <li><Typography>Submit expense reports with one click</Typography></li>
-              <li><Typography>Real-time approval tracking from managers</Typography></li>
-              <li><Typography>Direct reimbursement processing</Typography></li>
+              <li><Typography>Instructors create and upload course content through intuitive dashboard</Typography></li>
+              <li><Typography>Students browse courses with advanced filters and personalized recommendations</Typography></li>
+              <li><Typography>Add courses to cart and complete secure checkout</Typography></li>
+              <li><Typography>Track learning progress and interact with instructors via chat</Typography></li>
+              <li><Typography>Receive completion certificates and provide feedback</Typography></li>
             </Box>
           </Box>
 
@@ -330,10 +339,10 @@ const mock: Product[] = [
               Key Benefits:
             </Typography>
             <ul>
-              <li><Typography>Eliminates paper receipts and manual forms</Typography></li>
-              <li><Typography>Reduces expense report processing time by 70%</Typography></li>
-              <li><Typography>Policy compliance built into submission process</Typography></li>
-              <li><Typography>Real-time visibility into expense status</Typography></li>
+              <li><Typography>75% increase in course completion rates</Typography></li>
+              <li><Typography>3x more instructor-student interactions</Typography></li>
+              <li><Typography>60% reduction in support tickets</Typography></li>
+              <li><Typography>2.5x increase in course sales</Typography></li>
             </ul>
           </Box>
         </Box>
@@ -342,18 +351,21 @@ const mock: Product[] = [
   },
   {
     image: 'https://assets.maccarianagency.com/backgrounds/img24.jpg',
-    description: 'Application designed to help the tenants of apartments raise complaints against the various call-logs',
-    title: 'HOME SERVICE MANAGEMENT SYSTEM',
+    description: 'Comprehensive student networking platform for educational institutions',
+    title: 'EduFloor - Student Networking',
     details: {
-      description: 'Streamlined maintenance request system for apartment complexes.',
+      description: 'Smart campus solution connecting students, faculty and administration',
       features: [
-        'Maintenance request submission',
-        'Photo documentation',
-        'Priority classification',
-        'Status tracking',
-        'Communication portal',
-        'Vendor management',
-        'Reporting dashboard'
+        'Unified communication platform',
+        'Centralized academic resources',
+        'Assignment submission system',
+        'Online examination portal',
+        'Single-click class joining',
+        'Goal setting and tracking',
+        'Achievement portfolio',
+        'Attendance management',
+        'Dynamic timetable',
+        'Blogging and resume building'
       ],
       additionalImages: [
         'https://www.techineur.com/assets/img/products/ems/1.png',
@@ -365,12 +377,12 @@ const mock: Product[] = [
       <>
         <Box mt={4}>
           <Typography variant="h6" gutterBottom>
-            Complete Maintenance Solution
+            Complete Education Solution
           </Typography>
           
           <Typography paragraph>
-            Our system provides tenants with an easy way to report issues and track maintenance requests,
-            while giving property managers powerful tools to manage work orders efficiently.
+            EduFloor transforms academic institutions into smart campuses by connecting all stakeholders
+            through a unified platform that enhances learning, communication, and administration.
           </Typography>
 
           <Box sx={{ 
@@ -380,13 +392,13 @@ const mock: Product[] = [
             mb: 3
           }}>
             <Typography variant="subtitle1" gutterBottom sx={{ fontWeight: 600 }}>
-              Tenant Features:
+              Student Features:
             </Typography>
             <ul>
-              <li><Typography>Submit maintenance requests with photos</Typography></li>
-              <li><Typography>Track request status in real-time</Typography></li>
-              <li><Typography>Communicate directly with maintenance staff</Typography></li>
-              <li><Typography>View request history and resolutions</Typography></li>
+              <li><Typography>Single platform for all classes and communications</Typography></li>
+              <li><Typography>Submit assignments with tracking and receipts</Typography></li>
+              <li><Typography>Access learning materials and recorded sessions</Typography></li>
+              <li><Typography>Showcase achievements and build digital portfolios</Typography></li>
             </ul>
           </Box>
 
@@ -396,13 +408,13 @@ const mock: Product[] = [
             borderRadius: 2
           }}>
             <Typography variant="subtitle1" gutterBottom sx={{ fontWeight: 600 }}>
-              Management Benefits:
+              Institutional Benefits:
             </Typography>
             <ul>
-              <li><Typography>Prioritize and assign work orders efficiently</Typography></li>
-              <li><Typography>Track response times and completion rates</Typography></li>
-              <li><Typography>Generate reports on common issues</Typography></li>
-              <li><Typography>Integrate with vendor management systems</Typography></li>
+              <li><Typography>95% reduction in lost assignments and materials</Typography></li>
+              <li><Typography>80% faster class joining with unified links</Typography></li>
+              <li><Typography>3x increase in student engagement</Typography></li>
+              <li><Typography>Centralized knowledge repository for future reference</Typography></li>
             </ul>
           </Box>
         </Box>
@@ -411,18 +423,19 @@ const mock: Product[] = [
   },
   {
     image: 'https://assets.maccarianagency.com/backgrounds/img25.jpg',
-    description: 'Bouffage staff application can be used by restaurants to manage their table bookings and reservations',
-    title: 'BOUFFAGE STAFF APP',
+    description: 'Digital solution for processing insurance claims and reimbursements efficiently',
+    title: 'Claims and Reimbursement Portal',
     details: {
-      description: 'Restaurant management solution for front-of-house operations.',
+      description: 'End-to-end digital platform for insurance claims management',
       features: [
-        'Table management',
-        'Reservation system',
-        'Waitlist tracking',
-        'Customer profiles',
-        'Order management',
-        'Payment processing',
-        'Performance analytics'
+        'Digital claim submission forms',
+        'Real-time status tracking',
+        'Integrated messaging system',
+        'Role-based access control',
+        'Multi-device compatibility',
+        'Advanced analytics dashboard',
+        'Secure document management',
+        'Automated workflow processing'
       ],
       additionalImages: [
         'https://www.techineur.com/assets/img/products/bouffagestaff/1.png',
@@ -433,7 +446,7 @@ const mock: Product[] = [
       <>
         <Box mt={4}>
           <Typography variant="h6" gutterBottom sx={{ mb: 3 }}>
-            Restaurant Management Features
+            Claims Management Features
           </Typography>
           
           <Box sx={{ 
@@ -447,10 +460,10 @@ const mock: Product[] = [
               Core Functionality:
             </Typography>
             <ul>
-              <li><Typography>Real-time table management and reservations</Typography></li>
-              <li><Typography>Waitlist management with automatic notifications</Typography></li>
-              <li><Typography>Customer profile and preference tracking</Typography></li>
-              <li><Typography>Integrated with Bouffage customer app</Typography></li>
+              <li><Typography>Digital claim forms with validation and auto-fill</Typography></li>
+              <li><Typography>Real-time tracking of claim status and progress</Typography></li>
+              <li><Typography>Secure document upload and management</Typography></li>
+              <li><Typography>Integrated communication between all parties</Typography></li>
             </ul>
           </Box>
 
@@ -464,10 +477,10 @@ const mock: Product[] = [
               Business Benefits:
             </Typography>
             <ul>
-              <li><Typography>Increase table turnover with optimized seating</Typography></li>
-              <li><Typography>Improve customer experience with personalized service</Typography></li>
-              <li><Typography>Reduce no-shows with automated confirmations</Typography></li>
-              <li><Typography>Gain insights into customer preferences and behavior</Typography></li>
+              <li><Typography>70% reduction in processing time</Typography></li>
+              <li><Typography>90% fewer data entry errors</Typography></li>
+              <li><Typography>Enhanced security and compliance</Typography></li>
+              <li><Typography>Data-driven insights for process optimization</Typography></li>
             </ul>
           </Box>
         </Box>

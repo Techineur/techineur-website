@@ -3,9 +3,9 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
-
 import { NavItem } from './components';
 import Link from 'next/link';
+import { ThemeModeToggler } from 'layouts/Fixed/components/Topbar/components';
 
 interface Props {
   onSidebarOpen: () => void;
@@ -119,7 +119,8 @@ const Topbar = ({
         }),
         display: 'inline-block',
         position: 'relative',
-        zIndex: 1
+        zIndex: 1,
+        whiteSpace: 'nowrap',
       }}
     >
       WHO WE ARE
@@ -249,24 +250,16 @@ const Topbar = ({
   </Button>
 </Link>
         </Box>
-        <Box marginLeft={4}>
-        <Link href="Services" passHref>
-  <Button
-    component="a"
-    sx={{
+        <Box 
+  marginLeft={4}
+  sx={{
+    '& .NavItem-root .MuiTypography-root': {
       color: colorInvert ? 'common.white' : 'text.primary',
       position: 'relative',
       overflow: 'hidden',
       '&:hover': {
-        backgroundColor: 'transparent',
-        '&::before': {
-          transform: 'scaleX(1)',
-          transformOrigin: 'left'
-        },
-        '& .button-text': {
-          color: theme.palette.primary.main,
-          fontWeight: 600
-        }
+        color: theme.palette.primary.main,
+        fontWeight: 600,
       },
       '&::before': {
         content: '""',
@@ -283,33 +276,30 @@ const Topbar = ({
           easing: theme.transitions.easing.easeInOut
         })
       },
+      '&:hover::before': {
+        transform: 'scaleX(1)',
+        transformOrigin: 'left'
+      },
       textTransform: 'none',
-      textDecoration: 'none',
       fontWeight: 'medium',
       fontSize: '1rem',
       padding: '6px 8px',
-      borderRadius: 0, // Sharp corners for modern look
-      minWidth: 'auto' // Remove extra button padding
-    }}
-  >
-    <Box 
-      component="span" 
-      className="button-text"
-      sx={{
-        transition: theme.transitions.create(['color', 'font-weight'], {
-          duration: theme.transitions.duration.shorter,
-          easing: theme.transitions.easing.easeOut
-        }),
-        display: 'inline-block',
-        position: 'relative',
-        zIndex: 1
-      }}
-    >
-      SERVICES
-    </Box>
-  </Button>
-</Link>
-        </Box>
+    }
+  }}
+>
+  <NavItem
+    title={'SERVICES'}
+    id={'services-menu'}
+    items={[
+      { title: 'OUR SERVICES', href: '/Services' },
+      { title: 'SALESFORCE', href: '/Salesforce' },
+      { title: 'AI', href: '/Ai' },
+      ...secondaryPages
+    ]}
+    colorInvert={colorInvert}
+    hoverMenu={true}
+  />
+</Box>
         <Box marginLeft={4}>
         <Link href="ContactUs" passHref>
   <Button
@@ -363,7 +353,8 @@ const Topbar = ({
         }),
         display: 'inline-block',
         position: 'relative',
-        zIndex: 1
+        zIndex: 1,
+        whiteSpace: 'nowrap',
       }}
     >
       CONTACT US
@@ -371,8 +362,8 @@ const Topbar = ({
   </Button>
 </Link>
         </Box>
-        <Box marginLeft={4}>
-        <Link href="" passHref>
+        {/* <Box marginLeft={4}>
+        <Link href="Salesforce" passHref>
   <Button
     component="a"
     sx={{
@@ -431,8 +422,8 @@ const Topbar = ({
     </Box>
   </Button>
 </Link>
-        </Box>
-        <Box marginLeft={4}>
+        </Box> */}
+        {/* <Box marginLeft={4}>
         <Link href="Ai" passHref>
   <Button
     component="a"
@@ -491,11 +482,74 @@ const Topbar = ({
       AI
     </Box>
   </Button>
+</Link>           
+        </Box> */}
+        <Box marginLeft={4}>
+        <Link href="https://techineur.com/Techineur%20Solutions.pdf" passHref>
+  <Button
+    component="a"
+    sx={{
+      color: colorInvert ? 'common.white' : 'text.primary',
+      position: 'relative',
+      overflow: 'hidden',
+      '&:hover': {
+        backgroundColor: 'transparent',
+        '&::before': {
+          transform: 'scaleX(1)',
+          transformOrigin: 'left'
+        },
+        '& .button-text': {
+          color: theme.palette.primary.main,
+          fontWeight: 600
+        }
+      },
+      '&::before': {
+        content: '""',
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        width: '100%',
+        height: '2px',
+        backgroundColor: theme.palette.primary.main,
+        transform: 'scaleX(0)',
+        transformOrigin: 'right',
+        transition: theme.transitions.create('transform', {
+          duration: theme.transitions.duration.standard,
+          easing: theme.transitions.easing.easeInOut
+        })
+      },
+      textTransform: 'none',
+      textDecoration: 'none',
+      fontWeight: 'medium',
+      fontSize: '1rem',
+      padding: '6px 8px',
+      borderRadius: 0, // Sharp corners for modern look
+      minWidth: 'auto' // Remove extra button padding
+    }}
+  >
+    <Box 
+      component="span" 
+      className="button-text"
+      sx={{
+        transition: theme.transitions.create(['color', 'font-weight'], {
+          duration: theme.transitions.duration.shorter,
+          easing: theme.transitions.easing.easeOut
+        }),
+        display: 'inline-block',
+        position: 'relative',
+        zIndex: 1
+      }}
+    >
+      PORTFOLIO
+    </Box>
+  </Button>
 </Link>
         </Box>
-        <Box marginLeft={4}>
+        <ThemeModeToggler/>
+
+        {/* <Box marginLeft={4}>
           <NavItem
-            title={'PORTOFOLIO'}
+            title={'PORTFOLIO'}
             id={'portfolio-pages'}
             items={portfolioPages}
             colorInvert={colorInvert}
@@ -530,7 +584,12 @@ const Topbar = ({
           <MenuIcon />
         </Button>
       </Box>
+      <Box display={'flex'} justifyContent={'flex-end'} alignItems={'center'}>
+            
+            
+          </Box>
     </Box>
+    
   );
 };
 

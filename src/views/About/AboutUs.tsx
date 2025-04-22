@@ -32,13 +32,13 @@ const About = (): JSX.Element => {
        {/* <Container maxWidth={800} paddingY={'0 !important'}>
         <Divider />
       </Container> */}
-      <Container>
+      {/* <Container>
         <Team />
-      </Container>
+      </Container> */}
        <Box bgcolor={'alternate.main'}>
-        <Container>
+        {/* <Container>
           <Partners />
-        </Container>
+        </Container> */}
       </Box>
       {/* <Contact />
       <Container>

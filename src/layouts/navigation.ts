@@ -162,17 +162,17 @@ const pages = {
     // },
   ],
   secondary: [
-    {
-      title: 'Services',
-      href: '/Services',
-    },
     // {
-    //   title: 'Help Center: Article',
-    //   href: '/help-center-article',
+    //   title: 'Our Services',
+    //   href: '/Services',
     // },
     // {
-    //   title: 'FAQ',
-    //   href: '/faq',
+    //   title: 'SALESFORCE',
+    //   href: '/Salesforce',
+    // },
+    // {
+    //   title: 'AI',
+    //   href: '/Ai',
     // },
     // {
     //   title: 'Error 404: Simple',

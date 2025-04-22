@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react';
 import { useTheme, alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -9,8 +11,14 @@ import Grid from '@mui/material/Grid';
 import Modal from '@mui/material/Modal';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
+import Button from '@mui/material/Button';
+import Chip from '@mui/material/Chip';
+import Divider from '@mui/material/Divider';
+import Fade from '@mui/material/Fade';
 import { Theme } from '@mui/material/styles';
+import Link from 'next/link';
 
+// ... (keep your existing mock data and types)
 type ProductDetails = {
   features: string[];
   description?: string;
@@ -318,245 +326,374 @@ const Casestudy = (): JSX.Element => {
   };
 
   return (
-    <Box>
-        {/* Add the heading here */}
-      <Typography 
-        variant="h3" 
-        component="h2" 
-        align="center"
-        gutterBottom
-        sx={{
-          fontWeight: 700,
-          mb: 4,
-          color: theme.palette.primary.main
-        }}
-      >
-        Case Studies
-      </Typography>
-      <Box
-        display={'flex'}
-        justifyContent={'space-between'}
-        alignItems={{ xs: 'flex-start', sm: 'center' }}
-        flexDirection={{ xs: 'column', sm: 'row' }}
-        marginBottom={0}
-      >
+    <Box sx={{ py: 6, px: { xs: 2, sm: 4, md: 6 }, backgroundColor: alpha(theme.palette.background.default, 0.9) }}>
+      {/* Enhanced Header */}
+      <Box textAlign="center" mb={6}>
+        <Typography 
+          variant="h3" 
+          component="h2" 
+          gutterBottom
+          sx={{
+            fontWeight: 800,
+            color: theme.palette.primary.main,
+            mb: 2,
+            fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' },
+            textShadow: `1px 1px 2px ${alpha(theme.palette.primary.light, 0.3)}`
+          }}
+        >
+          Our Case Studies
+        </Typography>
+        <Typography 
+          variant="subtitle1" 
+          sx={{
+            color: theme.palette.text.secondary,
+            maxWidth: 800,
+            mx: 'auto',
+            fontSize: { xs: '1rem', md: '1.1rem' }
+          }}
+        >
+          Explore our successful implementations across various industries
+        </Typography>
       </Box>
 
+      {/* Case Study Grid with Hover Effects */}
       <Grid container spacing={4}>
         {mock.map((item, i) => (
           <Grid item xs={12} sm={6} md={4} key={i}>
-            <Box
+            <Card
               onClick={() => handleOpen(item)}
-              display={'block'}
-              width={1}
-              height={1}
               sx={{
-                textDecoration: 'none',
-                transition: 'all .2s ease-in-out',
-                cursor: 'pointer',
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                transition: 'all 0.3s ease-in-out',
+                boxShadow: 3,
+                borderRadius: 3,
+                overflow: 'hidden',
                 '&:hover': {
-                  transform: `translateY(-${theme.spacing(1 / 2)})`,
-                },
+                  transform: 'translateY(-8px)',
+                  boxShadow: 6,
+                  '& .MuiCardMedia-root': {
+                    transform: 'scale(1.05)'
+                  }
+                }
               }}
             >
-              <Box
-                component={Card}
-                width={1}
-                height={1}
-                boxShadow={4}
-                display={'flex'}
-                flexDirection={'column'}
-                sx={{ 
-                  backgroundImage: 'none',
-                  p: 2
+              <CardMedia
+                image={item.image}
+                title={item.title}
+                sx={{
+                  height: 240,
+                  transition: 'transform 0.5s ease',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  position: 'relative',
+                  '&:before': {
+                    content: '""',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    background: `linear-gradient(to bottom, transparent 60%, ${alpha(theme.palette.common.black, 0.7)})`
+                  }
                 }}
-              >
-                <CardMedia
-                  image={item.image}
-                  title={item.title}
+              />
+              <CardContent sx={{
+                flexGrow: 1,
+                background: `linear-gradient(${alpha(theme.palette.background.paper, 0.9)}, ${alpha(theme.palette.background.paper, 0.9)})`,
+                position: 'relative',
+                zIndex: 1
+              }}>
+                <Typography variant="h6" gutterBottom sx={{ fontWeight: 700 }}>
+                  {item.title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+                  {item.description}
+                </Typography>
+                <Button 
+                  variant="outlined" 
+                  size="small" 
                   sx={{
-                    height: { xs: 300, md: 360 },
-                    position: 'relative',
-                    borderRadius: 1
+                    mt: 'auto',
+                    borderColor: theme.palette.primary.main,
+                    color: theme.palette.primary.main,
+                    '&:hover': {
+                      backgroundColor: alpha(theme.palette.primary.main, 0.1),
+                      borderColor: theme.palette.primary.dark
+                    }
                   }}
-                />
-                <Box component={CardContent} position={'relative'} sx={{ p: 3 }}>
-                  <Typography variant={'h6'} gutterBottom>
-                    {item.title}
-                  </Typography>
-                  <Typography color="text.secondary">
-                    {item.description}
-                  </Typography>
-                </Box>
-              </Box>
-            </Box>
+                >
+                  View Details
+                </Button>
+              </CardContent>
+            </Card>
           </Grid>
         ))}
       </Grid>
 
-      {/* Enhanced Product Details Modal */}
+      {/* Enhanced Modal with Better Styling */}
       <Modal
         open={open}
         onClose={handleClose}
-        aria-labelledby="product-details-modal"
-        aria-describedby="product-details-description"
+        aria-labelledby="case-study-modal"
+        closeAfterTransition
+        BackdropProps={{
+          timeout: 500,
+        }}
         sx={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          backdropFilter: 'blur(4px)'
+          backdropFilter: 'blur(8px)',
         }}
       >
-        <Box
-          sx={{
-            position: 'relative',
-            width: { xs: '95%', sm: '90%', md: '85%', lg: '80%' },
-            maxWidth: 1200,
-            maxHeight: '90vh',
-            overflowY: 'auto',
-            bgcolor: 'background.paper',
-            boxShadow: 24,
-            borderRadius: 3,
-            p: { xs: 3, md: 4 },
-            outline: 'none',
-            border: `1px solid ${alpha(theme.palette.primary.main, 0.2)}`,
-            '&:focus': {
-              outline: 'none'
-            }
-          }}
-        >
-          <IconButton
-            aria-label="close"
-            onClick={handleClose}
+        <Fade in={open}>
+          <Box
             sx={{
-              position: 'fixed',
-              right: { xs: 20, md: 30 },
-              top: { xs: 20, md: 30 },
-              color: theme.palette.grey[500],
-              backgroundColor: alpha(theme.palette.background.paper, 0.9),
-              zIndex: 1,
-              width: 40,
-              height: 40,
-              '&:hover': {
-                backgroundColor: theme.palette.error.light,
-                color: theme.palette.error.contrastText
-              }
+              position: 'relative',
+              width: { xs: '95%', sm: '90%', md: '85%', lg: '80%' },
+              maxWidth: 1200,
+              maxHeight: '90vh',
+              overflowY: 'auto',
+              bgcolor: 'background.paper',
+              boxShadow: 24,
+              borderRadius: 3,
+              p: { xs: 2, md: 4 },
+              outline: 'none',
+              border: `2px solid ${alpha(theme.palette.primary.main, 0.2)}`,
+              '&::-webkit-scrollbar': {
+                width: '8px',
+              },
+              '&::-webkit-scrollbar-thumb': {
+                backgroundColor: alpha(theme.palette.primary.main, 0.4),
+                borderRadius: '4px',
+              },
             }}
           >
-            <CloseIcon />
-          </IconButton>
+            <IconButton
+              aria-label="close"
+              onClick={handleClose}
+              sx={{
+                position: 'fixed',
+                right: { xs: 20, md: 30 },
+                top: { xs: 20, md: 30 },
+                color: theme.palette.common.white,
+                backgroundColor: alpha(theme.palette.error.main, 0.8),
+                zIndex: 1,
+                width: 40,
+                height: 40,
+                transition: 'all 0.3s ease',
+                '&:hover': {
+                  backgroundColor: theme.palette.error.main,
+                  transform: 'rotate(90deg)'
+                }
+              }}
+            >
+              <CloseIcon />
+            </IconButton>
 
-          {selectedProduct && (
-            <Box>
-              <Box 
-                sx={{
-                  mb: 4,
-                  pb: 3,
-                  borderBottom: `1px solid ${theme.palette.divider}`
-                }}
-              >
-                <Typography 
-                  variant="h3" 
-                  component="h2" 
-                  gutterBottom
+            {selectedProduct && (
+              <Box>
+                {/* Header Section */}
+                <Box 
                   sx={{
-                    fontWeight: 700,
-                    color: theme.palette.primary.main
+                    mb: 4,
+                    pb: 3,
+                    borderBottom: `1px solid ${alpha(theme.palette.divider, 0.2)}`,
+                    textAlign: 'center'
                   }}
                 >
-                  {selectedProduct.title}
-                </Typography>
-                <Typography 
-                  variant="subtitle1" 
-                  sx={{
-                    fontSize: '1.1rem',
-                    color: theme.palette.text.secondary
-                  }}
-                >
-                  {selectedProduct.details.description || selectedProduct.description}
-                </Typography>
-              </Box>
-
-              <Grid container spacing={4}>
-                <Grid item xs={12} md={6}>
-                  <Box
+                  <Chip 
+                    label="Case Study" 
+                    color="primary" 
+                    size="small" 
+                    sx={{ 
+                      mb: 2,
+                      fontWeight: 600,
+                      px: 1,
+                      py: 0.5
+                    }} 
+                  />
+                  <Typography 
+                    variant="h3" 
+                    component="h2" 
+                    gutterBottom
                     sx={{
-                      mb: 4,
-                      p: 3,
-                      backgroundColor: alpha(theme.palette.primary.light, 0.05),
-                      borderRadius: 2,
-                      borderLeft: `4px solid ${theme.palette.primary.main}`
+                      fontWeight: 800,
+                      color: theme.palette.primary.main,
+                      fontSize: { xs: '1.8rem', md: '2.4rem' },
+                      lineHeight: 1.2
                     }}
                   >
-                    <Typography 
-                      variant="h5" 
-                      gutterBottom
+                    {selectedProduct.title}
+                  </Typography>
+                  <Typography 
+                    variant="subtitle1" 
+                    sx={{
+                      fontSize: '1.1rem',
+                      color: theme.palette.text.secondary,
+                      maxWidth: '80%',
+                      mx: 'auto'
+                    }}
+                  >
+                    {selectedProduct.details.description || selectedProduct.description}
+                  </Typography>
+                </Box>
+
+                <Grid container spacing={4}>
+                  <Grid item xs={12} md={6}>
+                    <Box
                       sx={{
-                        fontWeight: 600,
-                        mb: 2
+                        mb: 4,
+                        p: 4,
+                        backgroundColor: alpha(theme.palette.primary.light, 0.05),
+                        borderRadius: 3,
+                        borderLeft: `4px solid ${theme.palette.primary.main}`,
+                        boxShadow: 1,
+                        height: '100%'
                       }}
                     >
-                      Key Features
-                    </Typography>
-                    <Box 
-                      component="ul" 
-                      sx={{ 
-                        pl: 2,
-                        '& li': {
-                          mb: 1.5,
-                          pl: 1,
-                          position: 'relative',
-                          '&:before': {
-                            content: '"•"',
-                            color: theme.palette.primary.main,
-                            position: 'absolute',
-                            left: -15,
-                            fontSize: '1.2rem'
+                      <Typography 
+                        variant="h5" 
+                        gutterBottom
+                        sx={{
+                          fontWeight: 700,
+                          mb: 3,
+                          color: theme.palette.primary.dark,
+                          display: 'flex',
+                          alignItems: 'center',
+                          '&:after': {
+                            content: '""',
+                            flexGrow: 1,
+                            height: '1px',
+                            backgroundColor: alpha(theme.palette.divider, 0.3),
+                            ml: 2
                           }
+                        }}
+                      >
+                        Key Results
+                      </Typography>
+                      <Box 
+                        component="ul" 
+                        sx={{ 
+                          pl: 0,
+                          '& li': {
+                            mb: 2,
+                            pl: 0,
+                            display: 'flex',
+                            alignItems: 'flex-start',
+                            '&:before': {
+                              content: '""',
+                              display: 'inline-block',
+                              width: 8,
+                              height: 8,
+                              backgroundColor: theme.palette.primary.main,
+                              borderRadius: '50%',
+                              mt: 1,
+                              mr: 2,
+                              flexShrink: 0
+                            }
+                          }
+                        }}
+                      >
+                        {selectedProduct.details.features.map((feature, index) => (
+                          <li key={index}>
+                            <Typography variant="body1">{feature}</Typography>
+                          </li>
+                        ))}
+                      </Box>
+                    </Box>
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <Box
+                      sx={{
+                        height: '100%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        position: 'relative',
+                        borderRadius: 3,
+                        overflow: 'hidden',
+                        boxShadow: 3,
+                        '&:hover img': {
+                          transform: 'scale(1.03)'
                         }
                       }}
                     >
-                      {selectedProduct.details.features.map((feature, index) => (
-                        <li key={index}>
-                          <Typography>{feature}</Typography>
-                        </li>
-                      ))}
+                      <Box
+                        component="img"
+                        src={selectedProduct.image}
+                        alt={selectedProduct.title}
+                        sx={{
+                          width: '100%',
+                          height: 'auto',
+                          minHeight: 350,
+                          objectFit: 'cover',
+                          transition: 'transform 0.5s ease',
+                        }}
+                      />
+                      <Box
+                        sx={{
+                          position: 'absolute',
+                          bottom: 0,
+                          left: 0,
+                          right: 0,
+                          height: '40%',
+                          background: `linear-gradient(to top, ${alpha(theme.palette.common.black, 0.7)}, transparent)`
+                        }}
+                      />
                     </Box>
-                  </Box>
+                  </Grid>
                 </Grid>
-                <Grid item xs={12} md={6}>
-                  <Box
+
+                {/* Custom Content Section */}
+                <Box sx={{ 
+                  mt: 6,
+                  p: 4,
+                  backgroundColor: alpha(theme.palette.background.default, 0.5),
+                  borderRadius: 3,
+                  boxShadow: 1
+                }}>
+                  {selectedProduct.customContent}
+                </Box>
+
+                {/* Footer with CTA */}
+                <Box sx={{ 
+                  mt: 6,
+                  pt: 4,
+                  borderTop: `1px solid ${alpha(theme.palette.divider, 0.2)}`,
+                  textAlign: 'center'
+                }}>
+                  <Typography variant="h6" gutterBottom sx={{ fontWeight: 600, mb: 3 }}>
+                    Interested in a similar solution for your business?
+                  </Typography>
+                  <Link href="ContactUs">
+                  <Button 
+                    variant="contained" 
+                    size="large" 
+                    color="primary"
                     sx={{
-                      height: '100%',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center'
+                      px: 6,
+                      py: 1.5,
+                      fontWeight: 600,
+                      borderRadius: 2,
+                      boxShadow: `0 4px 20px ${alpha(theme.palette.primary.main, 0.2)}`,
+                      '&:hover': {
+                        boxShadow: `0 6px 24px ${alpha(theme.palette.primary.main, 0.3)}`,
+                        transform: 'translateY(-2px)'
+                      }
                     }}
                   >
-                    <Box
-                      component="img"
-                      src={selectedProduct.image}
-                      alt={selectedProduct.title}
-                      sx={{
-                        width: '100%',
-                        maxHeight: 350,
-                        borderRadius: 2,
-                        boxShadow: 3,
-                        objectFit: 'cover',
-                        border: `1px solid ${theme.palette.divider}`
-                      }}
-                    />
-                  </Box>
-                </Grid>
-              </Grid>
-
-              {/* Custom Content Section */}
-              <Box sx={{ mt: 4 }}>
-                {selectedProduct.customContent}
+                  Contact Our Team
+                    {/* Contact Our Team */}
+                  </Button>
+                  </Link>
+                </Box>
               </Box>
-            </Box>
-          )}
-        </Box>
+            )}
+          </Box>
+        </Fade>
       </Modal>
     </Box>
   );

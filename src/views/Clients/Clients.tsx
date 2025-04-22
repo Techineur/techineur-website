@@ -25,9 +25,9 @@ const Clients= (): JSX.Element => {
           <Partners />
         </Container>
       </Box>
-       <Container>
+       {/* <Container>
         <Features />
-      </Container> 
+      </Container>  */}
       {/* <Container>
         <Process />
       </Container>

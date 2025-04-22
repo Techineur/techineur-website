@@ -1,1 +1,1 @@
-export {default} from './Ai';
+export {default} from './AI';
