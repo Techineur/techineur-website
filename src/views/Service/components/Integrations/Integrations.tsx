@@ -23,7 +23,7 @@ const Integrations = (): JSX.Element => {
   return (
     <Box>
       <Grid container spacing={2}>
-        <Grid item container alignItems={'space-between'} xs={12} md={9}>
+        <Grid container alignItems={'space-between'} size={{ xs: 12, md: 6 }}>
           <Divider sx={{ width: 1 }} />
           <Box
             width={1}
@@ -50,7 +50,7 @@ const Integrations = (): JSX.Element => {
             ))}
           </Box>
         </Grid>
-        <Grid item xs={12} md={3}>
+        <Grid size={{ xs: 12 }} md={3}>
           <Box>
             <Typography
               variant={'h1'}

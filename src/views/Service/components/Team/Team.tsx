@@ -103,7 +103,7 @@ const Reviews = (): JSX.Element => {
       </Box>
       <Grid container spacing={2}>
         {mock.map((item, i) => (
-          <Grid item xs={12} sm={6} md={4} key={i}>
+          <Grid size={{ xs: 12 }} sm={6} md={4} key={i}>
             <Box sx={{ paddingBottom: 2 }}>
               <ListItem component="div" disableGutters sx={{ padding: 0 }}>
                 <ListItemAvatar sx={{ marginRight: 3 }}>

@@ -180,7 +180,7 @@ const Features = (): JSX.Element => {
       <Box>
         <Grid container spacing={4}>
           {mock.map((item, i) => (
-            <Grid item xs={12} sm={6} md={4} key={i}>
+            <Grid size={{ xs: 12 }} sm={6} md={4} key={i}>
               <Box
                 width={1}
                 height={1}

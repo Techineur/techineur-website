@@ -109,7 +109,7 @@ const mock: Product[] = [
           </Typography>
 
           <Grid container spacing={3} sx={{ mt: 2 }}>
-            <Grid item xs={12} md={4}>
+            <Grid size={{ xs: 12 }} md={4}>
               <Box
                 sx={{
                   p: 3,
@@ -154,7 +154,7 @@ const mock: Product[] = [
               </Box>
             </Grid>
 
-            <Grid item xs={12} md={4}>
+            <Grid size={{ xs: 12 }} md={4}>
               <Box
                 sx={{
                   p: 3,
@@ -200,7 +200,7 @@ const mock: Product[] = [
               </Box>
             </Grid>
 
-            <Grid item xs={12} md={4}>
+            <Grid size={{ xs: 12 }} md={4}>
               <Box
                 sx={{
                   p: 3,
@@ -351,7 +351,7 @@ const mock: Product[] = [
 
           <Grid container spacing={3} sx={{ mt: 2 }}>
             {/* Step 1 */}
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Box
                 sx={{
                   p: 3,
@@ -400,7 +400,7 @@ const mock: Product[] = [
             </Grid>
 
             {/* Step 2 */}
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Box
                 sx={{
                   p: 3,
@@ -445,7 +445,7 @@ const mock: Product[] = [
             </Grid>
 
             {/* Step 3 */}
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Box
                 sx={{
                   p: 3,
@@ -489,7 +489,7 @@ const mock: Product[] = [
             </Grid>
 
             {/* Step 4 */}
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Box
                 sx={{
                   p: 3,
@@ -537,7 +537,7 @@ const mock: Product[] = [
             </Grid>
 
             {/* Step 5 */}
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Box
                 sx={{
                   p: 3,
@@ -581,7 +581,7 @@ const mock: Product[] = [
             </Grid>
 
             {/* Step 6 */}
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Box
                 sx={{
                   p: 3,
@@ -625,7 +625,7 @@ const mock: Product[] = [
             </Grid>
 
             {/* Step 7 */}
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Box
                 sx={{
                   p: 3,
@@ -737,7 +737,7 @@ const mock: Product[] = [
           </Typography>
 
           <Grid container spacing={3} sx={{ mt: 2, mb: 4 }}>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12 }} md={6}>
               <Box
                 sx={{
                   p: 3,
@@ -807,7 +807,7 @@ const mock: Product[] = [
                 </Box>
               </Box>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12 }} md={6}>
               <Box
                 sx={{
                   p: 3,
@@ -889,7 +889,7 @@ const mock: Product[] = [
             Why Choose Techineur for Salesforce® Integration
           </Typography>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={4}>
+            <Grid size={{ xs: 12 }} md={4}>
               <Box
                 sx={{
                   p: 3,
@@ -911,7 +911,7 @@ const mock: Product[] = [
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={12} md={4}>
+            <Grid size={{ xs: 12 }} md={4}>
               <Box
                 sx={{
                   p: 3,
@@ -932,7 +932,7 @@ const mock: Product[] = [
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={12} md={4}>
+            <Grid size={{ xs: 12 }} md={4}>
               <Box
                 sx={{
                   p: 3,
@@ -1409,7 +1409,7 @@ const mock: Product[] = [
               { number: '9', title: 'Commented Code' },
               { number: '10', title: 'Data Masking' },
             ].map((item, index) => (
-              <Grid item xs={12} sm={6} md={4} key={index}>
+              <Grid size={{ xs: 12 }} sm={6} md={4} key={index}>
                 <Box
                   sx={{
                     p: 3,
@@ -1573,7 +1573,7 @@ const mock: Product[] = [
                 color: theme.palette.info.main,
               },
             ].map((benefit, index) => (
-              <Grid item xs={12} sm={6} md={3} key={index}>
+              <Grid size={{ xs: 12 }} sm={6} md={3} key={index}>
                 <Box
                   sx={{
                     p: 3,
@@ -1679,7 +1679,7 @@ const mock: Product[] = [
 
           {/* Services List */}
           <Grid container spacing={3}>
-            <Grid item xs={12} md={4}>
+            <Grid size={{ xs: 12 }} md={4}>
               <Box
                 sx={{
                   p: 3,
@@ -1702,7 +1702,7 @@ const mock: Product[] = [
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={12} md={4}>
+            <Grid size={{ xs: 12 }} md={4}>
               <Box
                 sx={{
                   p: 3,
@@ -1725,7 +1725,7 @@ const mock: Product[] = [
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={12} md={4}>
+            <Grid size={{ xs: 12 }} md={4}>
               <Box
                 sx={{
                   p: 3,
@@ -1904,7 +1904,7 @@ const mock: Product[] = [
                 content: 'Enhanced tools for team collaboration',
               },
             ].map((item, index) => (
-              <Grid item xs={12} sm={6} md={4} key={index}>
+              <Grid size={{ xs: 12 }} sm={6} md={4} key={index}>
                 <Box
                   sx={{
                     p: 3,
@@ -1972,7 +1972,7 @@ const mock: Product[] = [
             </Typography>
 
             <Grid container spacing={2} sx={{ mt: 2 }}>
-              <Grid item xs={12} md={6}>
+              <Grid size={{ xs: 12 }} md={6}>
                 <Box sx={{ display: 'flex', gap: 2, mb: 2 }}>
                   <Box
                     sx={{
@@ -2015,7 +2015,7 @@ const mock: Product[] = [
                   </Typography>
                 </Box>
               </Grid>
-              <Grid item xs={12} md={6}>
+              <Grid size={{ xs: 12 }} md={6}>
                 <Box sx={{ display: 'flex', gap: 2, mb: 2 }}>
                   <Box
                     sx={{
@@ -2153,7 +2153,7 @@ const Crmservices = (): JSX.Element => {
 
       <Grid container spacing={4} sx={{ px: { xs: 2, sm: 4, md: 6 } }}>
         {mock.map((item, i) => (
-          <Grid item xs={12} sm={6} md={4} key={i}>
+          <Grid size={{ xs: 12 }} sm={6} md={4} key={i}>
             <Box
               onMouseEnter={() => setHoveredCard(i)}
               onMouseLeave={() => setHoveredCard(null)}
@@ -2441,7 +2441,7 @@ const Crmservices = (): JSX.Element => {
               </Box>
 
               <Grid container spacing={4}>
-                <Grid item xs={12} md={6}>
+                <Grid size={{ xs: 12 }} md={6}>
                   <Box
                     sx={{
                       mb: 4,
@@ -2540,7 +2540,7 @@ const Crmservices = (): JSX.Element => {
                     </Box>
                   </Box>
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid size={{ xs: 12 }} md={6}>
                   <Box
                     sx={{
                       height: '100%',

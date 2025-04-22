@@ -428,7 +428,7 @@ const Casestudy = (): JSX.Element => {
       {/* Case Study Grid with Hover Effects */}
       <Grid container spacing={4}>
         {mock.map((item, i) => (
-          <Grid item xs={12} sm={6} md={4} key={i}>
+          <Grid size={{ xs: 12 }} sm={6} md={4} key={i}>
             <Card
               onClick={() => handleOpen(item)}
               sx={{
@@ -620,7 +620,7 @@ const Casestudy = (): JSX.Element => {
                 </Box>
 
                 <Grid container spacing={4}>
-                  <Grid item xs={12} md={6}>
+                  <Grid size={{ xs: 12 }} md={6}>
                     <Box
                       sx={{
                         mb: 4,
@@ -688,7 +688,7 @@ const Casestudy = (): JSX.Element => {
                       </Box>
                     </Box>
                   </Grid>
-                  <Grid item xs={12} md={6}>
+                  <Grid size={{ xs: 12 }} md={6}>
                     <Box
                       sx={{
                         height: '100%',

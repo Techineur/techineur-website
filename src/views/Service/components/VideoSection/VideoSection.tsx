@@ -11,7 +11,7 @@ const VideoSection = (): JSX.Element => {
 
   return (
     <Grid container spacing={4}>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <Box
           sx={{
             maxWidth: 450,
@@ -70,7 +70,7 @@ const VideoSection = (): JSX.Element => {
           </Box>
         </Box>
       </Grid>
-      <Grid item container alignItems={'center'} xs={12} md={6}>
+      <Grid container alignItems={'center'} size={{ xs: 12, md: 6 }}>
         <Box>
           <Box marginBottom={2}>
             <Typography

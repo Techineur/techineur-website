@@ -78,7 +78,7 @@ const NotFound = (): JSX.Element => {
                 </Box>
               </Box>
             </Grid>
-            <Grid item container justifyContent={'center'} xs={12} md={6}>
+            <Grid container justifyContent={'center'} size={{ xs: 12, md: 6 }}>
               <Box height={1} width={1} maxWidth={500}>
                 <Box
                   component={'img'}

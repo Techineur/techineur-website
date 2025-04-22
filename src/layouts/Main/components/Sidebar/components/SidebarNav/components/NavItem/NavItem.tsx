@@ -46,7 +46,7 @@ const NavItem = ({ title, items }: Props): JSX.Element => {
         <AccordionDetails sx={{ padding: 0 }}>
           <Grid container spacing={1}>
             {items.map((p, i) => (
-              <Grid item key={i} xs={12}>
+              <Grid key={i} size={{ xs: 12 }}>
                 <Button
                   size={'large'}
                   component={'a'}

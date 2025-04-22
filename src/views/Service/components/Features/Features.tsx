@@ -18,7 +18,7 @@ const Features = (): JSX.Element => {
 
   return (
     <Grid container spacing={4}>
-      <Grid item container alignItems={'center'} xs={12} md={6}>
+      <Grid container alignItems={'center'} size={{ xs: 12, md: 6 }}>
         <Box data-aos={isMd ? 'fade-right' : 'fade-up'}>
           <Box marginBottom={2}>
             <Typography variant={'h4'} sx={{ fontWeight: 700 }} gutterBottom>
@@ -38,7 +38,7 @@ const Features = (): JSX.Element => {
               'Tons of assets & lifetime updates',
               'Integration ready & tech support',
             ].map((item, i) => (
-              <Grid item xs={12} key={i}>
+              <Grid size={{ xs: 12 }} key={i}>
                 <Box
                   component={ListItem}
                   disableGutters
@@ -78,7 +78,7 @@ const Features = (): JSX.Element => {
           </Grid>
         </Box>
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12 }} md={6}>
         <Box
           sx={{
             maxWidth: 450,

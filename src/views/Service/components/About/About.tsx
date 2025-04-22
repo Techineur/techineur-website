@@ -70,12 +70,12 @@ const Hero = (): JSX.Element => {
 
   return (
     <Grid container spacing={4}>
-      <Grid item container alignItems={'center'} xs={12} md={6}>
+      <Grid container alignItems={'center'} size={{ xs: 12, md: 6 }}>
         <Box data-aos={isMd ? 'fade-right' : 'fade-up'}>
           <LeftSide />
         </Box>
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12 }} md={6}>
         <Box
           sx={{
             position: 'relative',

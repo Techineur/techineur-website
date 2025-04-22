@@ -138,7 +138,7 @@ const NavItem = ({
         >
           <Grid container spacing={0.5}>
             {items.map((p, i) => (
-              <Grid item key={i} xs={items.length > 12 ? 6 : 12}>
+              <Grid key={i} size={{ xs: items.length > 12 ? 6 : 12 }}>
                 <Button
                   component={'a'}
                   href={p.href}

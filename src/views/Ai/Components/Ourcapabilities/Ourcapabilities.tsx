@@ -26,7 +26,7 @@ const Ourcapabilities = (): JSX.Element => {
   return (
     <Box sx={{ backgroundColor: theme.palette.background.paper, py: 8 }}>
       <Grid container spacing={4} direction={isMd ? 'row' : 'column'}>
-        <Grid item container alignItems={'center'} xs={12} md={6}>
+        <Grid container alignItems={'center'} size={{ xs: 12, md: 6 }}>
           <Box>
             <Typography
               variant={'h4'}

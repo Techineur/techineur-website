@@ -840,7 +840,7 @@ const OurProducts = (): JSX.Element => {
 
       <Grid container spacing={4}>
         {mock.map((item, i) => (
-          <Grid item xs={12} sm={6} md={4} key={i}>
+          <Grid size={{ xs: 12 }} sm={6} md={4} key={i}>
             <Box
               onClick={() => handleOpen(item)}
               display={'block'}
@@ -979,7 +979,7 @@ const OurProducts = (): JSX.Element => {
               </Box>
 
               <Grid container spacing={4}>
-                <Grid item xs={12} md={6}>
+                <Grid size={{ xs: 12 }} md={6}>
                   <Box
                     sx={{
                       mb: 4,
@@ -1027,7 +1027,7 @@ const OurProducts = (): JSX.Element => {
                     </Box>
                   </Box>
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid size={{ xs: 12 }} md={6}>
                   <Box
                     sx={{
                       height: '100%',
@@ -1072,7 +1072,7 @@ const OurProducts = (): JSX.Element => {
                   <Grid container spacing={3}>
                     {selectedProduct.details.additionalImages.map(
                       (img, index) => (
-                        <Grid item xs={12} sm={6} key={index}>
+                        <Grid size={{ xs: 12 }} sm={6} key={index}>
                           <Box
                             sx={{
                               p: 1,

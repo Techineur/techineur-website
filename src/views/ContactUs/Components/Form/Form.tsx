@@ -80,7 +80,7 @@ const Form = (): JSX.Element => {
         }}
       >
         <Grid container spacing={isMd ? 4 : 2}>
-          <Grid item xs={12}>
+          <Grid size={{ xs: 12 }}>
             <Typography
               variant="subtitle1"
               color="text.primary"
@@ -103,7 +103,7 @@ const Form = (): JSX.Element => {
               helperText={formik.touched.fullName && formik.errors.fullName}
             />
           </Grid>
-          <Grid item xs={12}>
+          <Grid size={{ xs: 12 }}>
             <Typography
               variant="subtitle1"
               color="text.primary"
@@ -126,7 +126,7 @@ const Form = (): JSX.Element => {
               helperText={formik.touched.email && formik.errors.email}
             />
           </Grid>
-          <Grid item xs={12}>
+          <Grid size={{ xs: 12 }}>
             <Typography
               variant="subtitle1"
               color="text.primary"
@@ -149,7 +149,7 @@ const Form = (): JSX.Element => {
               helperText={formik.touched.message && formik.errors.message}
             />
           </Grid>
-          <Grid item container justifyContent="center" xs={12}>
+          <Grid container justifyContent="center" size={{ xs: 12 }}>
             <Button
               variant="contained"
               type="submit"

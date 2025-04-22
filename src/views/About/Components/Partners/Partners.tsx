@@ -18,7 +18,7 @@ const Partners = (): JSX.Element => {
   return (
     <Box>
       <Grid container spacing={4}>
-        <Grid item xs={12} md={6}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <Box>
             <Typography variant={'h4'} gutterBottom sx={{ fontWeight: 700 }}>
               Trusted by you favorite companies
@@ -30,7 +30,7 @@ const Partners = (): JSX.Element => {
             </Typography> */}
           </Box>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <Box>
             <Box display="flex" flexWrap="wrap" justifyContent={'flex-start'}>
               {mock.map((item, i) => (
