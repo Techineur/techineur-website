@@ -32,12 +32,10 @@ const NotFound = (): JSX.Element => {
         <Container>
           <Grid container>
             <Grid
-              item
               container
               alignItems={'center'}
               justifyContent={'center'}
-              xs={12}
-              md={6}
+              size={{ xs: 12, md: 6 }}
             >
               <Box>
                 <Typography
