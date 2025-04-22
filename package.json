@@ -60,7 +60,6 @@
     "@babel/core": "^7.23.6",
     "@babel/plugin-syntax-flow": "^7.23.3",
     "@babel/plugin-transform-react-jsx": "^7.23.4",
-    "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.25.1",
     "@types/aos": "^3.0.7",
     "@types/node": "^20.10.4",
