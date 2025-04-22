@@ -75,7 +75,7 @@ const Hero = (): JSX.Element => {
           <LeftSide />
         </Box>
       </Grid>
-      <Grid size={{ xs: 12, md:{6} }}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <Box
           sx={{
             position: 'relative',

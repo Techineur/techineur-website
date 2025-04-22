@@ -16,12 +16,10 @@ const WhoWeAre = (): JSX.Element => {
       <Grid container spacing={4} direction={isMd ? 'row' : 'column'}>
         {/* Our Mission Section */}
         <Grid
-          item
           container
           alignItems={'flex-start'} // Align items to the top
           justifyContent="center"
-          xs={12}
-          md={6}
+          size={{ xs: 12, md: 6 }}
         >
           <Box maxWidth={600} width={1}>
             <Typography
@@ -62,12 +60,10 @@ const WhoWeAre = (): JSX.Element => {
 
         {/* Our Vision Section */}
         <Grid
-          item
           container
           alignItems={'flex-start'} // Align items to the top
           justifyContent="center"
-          xs={12}
-          md={6}
+          size={{ xs: 12, md: 6 }}
         >
           <Box maxWidth={600} width={1}>
             <Typography

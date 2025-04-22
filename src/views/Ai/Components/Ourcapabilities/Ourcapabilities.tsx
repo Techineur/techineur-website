@@ -64,12 +64,10 @@ const Ourcapabilities = (): JSX.Element => {
           </Box>
         </Grid>
         <Grid
-          item
           container
           justifyContent="center"
           alignItems="center"
-          xs={12}
-          md={6}
+          size={{ xs: 12, md: 6 }}
           sx={{
             position: 'relative',
             minHeight: { xs: 300, md: 'auto' },
