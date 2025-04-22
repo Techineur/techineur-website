@@ -1,6 +1,6 @@
 'use client'; // This is a client component 👈🏽
 
-import React from 'react';
+import React, { JSX } from 'react';
 
 import { Contact } from 'views/ContactUs/Components';
 

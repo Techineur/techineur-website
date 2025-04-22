@@ -1,6 +1,6 @@
 'use client'; // This is a client component 👈🏽
 
-import React from 'react';
+import React, { JSX } from 'react';
 import { Features } from 'views/Clients/Components';
 
 const feature = (): JSX.Element => {
