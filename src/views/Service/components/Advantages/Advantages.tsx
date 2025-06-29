@@ -10,9 +10,9 @@ import Typography from '@mui/material/Typography';
 
 const mock = [
   {
-    title: 'Themeable',
+    title: 'Scalable Solutions',
     subtitle:
-      'Customize any part of our components to match your design needs.',
+      'Cloud-native architectures that grow with your business needs and handle increasing demands.',
     icon: (
       <svg
         height={24}
@@ -32,9 +32,9 @@ const mock = [
     ),
   },
   {
-    title: 'Light and dark UI',
+    title: '24/7 Support',
     subtitle:
-      'Optimized for multiple color modes. Use light or dark, your choice.',
+      'Round-the-clock technical support and monitoring to keep your systems running smoothly.',
     icon: (
       <svg
         height={24}
@@ -54,9 +54,9 @@ const mock = [
     ),
   },
   {
-    title: 'Composable',
+    title: 'Agile Development',
     subtitle:
-      'Designed with composition in mind. Compose new components with ease.',
+      'Rapid prototyping and iterative development methodology for faster time-to-market.',
     icon: (
       <svg
         height={24}
@@ -76,9 +76,9 @@ const mock = [
     ),
   },
   {
-    title: 'Developer experience',
+    title: 'Expert Team',
     subtitle:
-      'Guaranteed to boost your productivity when building your app or website.',
+      'Certified professionals with deep expertise in cutting-edge technologies and frameworks.',
     icon: (
       <svg
         height={24}
@@ -98,8 +98,8 @@ const mock = [
     ),
   },
   {
-    title: 'Continuous updates',
-    subtitle: 'We continually deploy improvements and new updates to theFront.',
+    title: 'Security First',
+    subtitle: 'Enterprise-grade security measures and compliance with industry standards.',
     icon: (
       <svg
         height={24}
@@ -119,9 +119,9 @@ const mock = [
     ),
   },
   {
-    title: 'Free support',
+    title: 'Cost Effective',
     subtitle:
-      '6 months of free technical support to help you build your website faster.',
+      'Competitive pricing with transparent costs and flexible engagement models.',
     icon: (
       <svg
         height={24}
@@ -164,9 +164,9 @@ const Advantages = (): JSX.Element => {
           align={'center'}
           sx={{ fontWeight: 700 }}
         >
-          The powerful and flexible theme
+          Why Choose Our Technology Services
           <br />
-          for all kinds of businesses
+          for Your Business Growth
         </Typography>
         <Typography
           variant={'h6'}
@@ -174,16 +174,15 @@ const Advantages = (): JSX.Element => {
           color={'text.secondary'}
           align={'center'}
         >
-          Build a beautiful, modern website with flexible, fully customizable,
-          atomic MUI components.
+          We deliver comprehensive technology solutions with proven methodologies,
+          cutting-edge tools, and dedicated support.
           <br />
-          An experience you'd expect from a design system.
+          Experience the difference of working with technology experts.
         </Typography>
         <Box marginTop={3} display={'flex'} justifyContent={'center'}>
           <Button
             component={'a'}
-            href={'https://mui.com/store/items/the-front-landing-page/'}
-            target={'_blank'}
+            href={'/ContactUs'}
             variant="contained"
             color="primary"
             size="large"
@@ -205,7 +204,7 @@ const Advantages = (): JSX.Element => {
               </svg>
             }
           >
-            Purchase now
+            Get Started
           </Button>
         </Box>
       </Box>

@@ -11,33 +11,33 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 
 const mock = [
   {
-    name: 'Clara Bertoletti',
-    title: 'MUI lover',
+    name: 'Alex Chen',
+    title: 'Chief Technology Officer',
     avatar: 'https://assets.maccarianagency.com/avatars/img4.jpg',
   },
   {
-    name: 'Jhon Anderson',
-    title: 'Senior Frontend Developer',
+    name: 'Sarah Johnson',
+    title: 'Lead Cloud Architect',
     avatar: 'https://assets.maccarianagency.com/avatars/img5.jpg',
   },
   {
-    name: 'Chary Smith',
-    title: 'SEO at Comoti',
+    name: 'Michael Rodriguez',
+    title: 'AI/ML Engineering Director',
     avatar: 'https://assets.maccarianagency.com/avatars/img6.jpg',
   },
   {
-    name: 'Clara Bertoletti',
-    title: 'MUI lover',
+    name: 'Emily Watson',
+    title: 'Senior Full-Stack Developer',
     avatar: 'https://assets.maccarianagency.com/avatars/img1.jpg',
   },
   {
-    name: 'Jhon Anderson',
-    title: 'Senior Frontend Developer',
+    name: 'David Kumar',
+    title: 'DevOps & Security Lead',
     avatar: 'https://assets.maccarianagency.com/avatars/img2.jpg',
   },
   {
-    name: 'Chary Smith',
-    title: 'SEO at Comoti',
+    name: 'Lisa Thompson',
+    title: 'Mobile Development Expert',
     avatar: 'https://assets.maccarianagency.com/avatars/img3.jpg',
   },
 ];
@@ -69,7 +69,7 @@ const Reviews = (): JSX.Element => {
             marginTop: theme.spacing(1),
           }}
         >
-          Why work with us
+          Meet Our Expert Team
         </Typography>
         <Typography
           variant="h6"
@@ -77,7 +77,7 @@ const Reviews = (): JSX.Element => {
           color={'text.secondary'}
           data-aos={'fade-up'}
         >
-          We are a small agency of talented designers & developers.
+          Our certified technology professionals bring years of expertise in cutting-edge solutions and digital transformation.
         </Typography>
         <Box marginTop={2} display={'flex'} justifyContent={'center'}>
           <Button

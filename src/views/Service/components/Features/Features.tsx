@@ -22,21 +22,21 @@ const Features = (): JSX.Element => {
         <Box data-aos={isMd ? 'fade-right' : 'fade-up'}>
           <Box marginBottom={2}>
             <Typography variant={'h4'} sx={{ fontWeight: 700 }} gutterBottom>
-              The powerful and flexible theme for all kinds of businesses
+              Comprehensive Technology Stack and Services
             </Typography>
             <Typography color="text.secondary" variant={'h6'}>
-              Send one-off and automated email, push, and in-app messages to
-              people.
+              From cloud infrastructure to AI solutions, we provide end-to-end
+              technology services.
               <br />
-              Create better stories.
+              Transform your business with our expertise.
             </Typography>
           </Box>
           <Grid container spacing={1}>
             {[
-              'Lifetime updates & introduction and working',
-              'Tech support & mutual funds',
-              'Tons of assets & lifetime updates',
-              'Integration ready & tech support',
+              'Cloud Infrastructure & DevOps Solutions',
+              'Custom Software Development & APIs',
+              'AI/ML Integration & Data Analytics',
+              'Mobile App Development & Maintenance',
             ].map((item, i) => (
               <Grid size={{ xs: 12 }} key={i}>
                 <Box
@@ -117,10 +117,10 @@ const Features = (): JSX.Element => {
                   loading="lazy"
                   src={
                     theme.palette.mode === 'light'
-                      ? 'https://assets.maccarianagency.com/screenshots/crypto-mobile.png'
-                      : 'https://assets.maccarianagency.com/screenshots/crypto-mobile--dark.png'
+                      ? 'https://assets.maccarianagency.com/screenshots/business-app-light.png'
+                      : 'https://assets.maccarianagency.com/screenshots/business-app-dark.png'
                   }
-                  alt="Image Description"
+                  alt="Business Application Interface"
                   width={1}
                   height={1}
                   sx={{

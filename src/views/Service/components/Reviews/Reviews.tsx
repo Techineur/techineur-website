@@ -50,11 +50,11 @@ const Reviews = (): JSX.Element => {
             marginTop: theme.spacing(1),
           }}
         >
-          Rated 5 out of 5 stars by our customers!
+          Trusted by Industry Leaders Worldwide
         </Typography>
         <Typography variant="h6" color={'text.secondary'} data-aos={'fade-up'}>
-          Companies from across the globe have had fantastic experiences using
-          theFront.
+          From startups to enterprise companies, our clients achieve remarkable results with
+          our technology solutions.
           <br />
           Here’s what they have to say.
         </Typography>

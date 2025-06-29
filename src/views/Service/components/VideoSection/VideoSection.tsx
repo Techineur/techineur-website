@@ -50,10 +50,10 @@ const VideoSection = (): JSX.Element => {
                   loading="lazy"
                   src={
                     theme.palette.mode === 'light'
-                      ? 'https://assets.maccarianagency.com/screenshots/crypto-mobile.png'
-                      : 'https://assets.maccarianagency.com/screenshots/crypto-mobile--dark.png'
+                      ? 'https://assets.maccarianagency.com/screenshots/mobile-app-light.png'
+                      : 'https://assets.maccarianagency.com/screenshots/mobile-app-dark.png'
                   }
-                  alt="Image Description"
+                  alt="Mobile Technology Solution Preview"
                   width={1}
                   height={1}
                   sx={{
@@ -80,13 +80,15 @@ const VideoSection = (): JSX.Element => {
                 fontWeight: 700,
               }}
             >
-              Now available on Google Play market and Apple Store
+              Comprehensive Technology Solutions for Modern Businesses
             </Typography>
           </Box>
           <Box marginBottom={3}>
             <Typography variant="h6" component="p" color="text.secondary">
-              Don't listen to what they say go and see. Travelling with our app
-              is easy. Join the biggest community of travellers.
+              From cloud infrastructure to custom software development, we provide 
+              end-to-end technology solutions that scale with your business. Our 
+              mobile-first approach ensures your applications work seamlessly 
+              across all platforms.
             </Typography>
           </Box>
           <Box
@@ -102,7 +104,7 @@ const VideoSection = (): JSX.Element => {
               width="100%"
               height="100%"
               minHeight={250}
-              src="https://www.youtube.com/embed/ClIbn_IF31U"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
               frameBorder="0"
               allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
               boxShadow={4}

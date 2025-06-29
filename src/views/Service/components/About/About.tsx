@@ -16,7 +16,7 @@ const Hero = (): JSX.Element => {
     <Box>
       <Box marginBottom={2}>
         <Typography component={'span'} variant="h3" sx={{ fontWeight: 700 }}>
-          Organic company growth with{' '}
+          Transform your business with{' '}
           <Typography
             component={'span'}
             variant={'inherit'}
@@ -28,13 +28,14 @@ const Hero = (): JSX.Element => {
               )} 0%)`,
             }}
           >
-            targeted leads
+            cutting-edge technology
           </Typography>
         </Typography>
       </Box>
       <Typography variant="h6" component="p" color={'text.secondary'}>
-        Our mission is to spread education that is easy accessible and everyone
-        can learn.
+        We deliver innovative technology solutions that drive digital transformation, 
+        streamline operations, and accelerate your business growth through expert 
+        consulting, custom development, and strategic implementation.
       </Typography>
       <Box
         display="flex"
@@ -43,10 +44,10 @@ const Hero = (): JSX.Element => {
         marginTop={4}
       >
         {[
-          'https://assets.maccarianagency.com/svg/logos/airbnb-original.svg',
-          'https://assets.maccarianagency.com/svg/logos/amazon-original.svg',
-          'https://assets.maccarianagency.com/svg/logos/fitbit-original.svg',
-          'https://assets.maccarianagency.com/svg/logos/netflix-original.svg',
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg',
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
         ].map((item, i) => (
           <Box maxWidth={70} marginTop={2} marginRight={4} key={i}>
             <Box
@@ -54,12 +55,13 @@ const Hero = (): JSX.Element => {
               height={1}
               width={1}
               src={item}
-              alt="..."
+              alt="Technology partner logo"
               sx={{
                 filter:
                   theme.palette.mode === 'dark'
-                    ? 'brightness(0) invert(0.7)'
-                    : 'contrast(0) brightness(0)',
+                    ? 'brightness(0.8)'
+                    : 'none',
+                objectFit: 'contain',
               }}
             />
           </Box>
@@ -115,8 +117,8 @@ const Hero = (): JSX.Element => {
                 <Box
                   component={'img'}
                   loading="lazy"
-                  src="https://assets.maccarianagency.com/screenshots/dashboard.png"
-                  alt="Image Description"
+                  src="https://assets.maccarianagency.com/screenshots/tech-dashboard.png"
+                  alt="Technology Dashboard Preview"
                   width={1}
                   height={1}
                   sx={{
