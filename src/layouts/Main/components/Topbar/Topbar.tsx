@@ -61,7 +61,6 @@ const Topbar = ({
         <Box>
           <Link href="aboutUs" passHref>
             <Button
-              component="a"
               sx={{
                 color: colorInvert ? 'common.white' : 'text.primary',
                 position: 'relative',
@@ -126,7 +125,6 @@ const Topbar = ({
         <Box marginLeft={4}>
           <Link href="Products" passHref>
             <Button
-              component="a"
               sx={{
                 color: colorInvert ? 'common.white' : 'text.primary',
                 position: 'relative',
@@ -190,7 +188,6 @@ const Topbar = ({
         <Box marginLeft={4}>
           <Link href="Clients" passHref>
             <Button
-              component="a"
               sx={{
                 color: colorInvert ? 'common.white' : 'text.primary',
                 position: 'relative',
@@ -304,7 +301,6 @@ const Topbar = ({
         <Box marginLeft={4}>
           <Link href="ContactUs" passHref>
             <Button
-              component="a"
               sx={{
                 color: colorInvert ? 'common.white' : 'text.primary',
                 position: 'relative',
@@ -491,7 +487,6 @@ const Topbar = ({
         <Box marginLeft={4}>
           <Link href="https://techineur.com/Techineur%20Solutions.pdf" passHref>
             <Button
-              component="a"
               sx={{
                 color: colorInvert ? 'common.white' : 'text.primary',
                 position: 'relative',

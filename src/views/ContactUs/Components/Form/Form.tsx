@@ -37,8 +37,9 @@ const Form = (): JSX.Element => {
     email: '',
   };
 
-  const onSubmit = (values) => {
-    return values;
+  const onSubmit = (values: typeof initialValues) => {
+    // Handle form submission here
+    console.log('Form submitted:', values);
   };
 
   const formik = useFormik({
@@ -99,8 +100,7 @@ const Form = (): JSX.Element => {
               value={formik.values.fullName}
               onChange={formik.handleChange}
               error={formik.touched.fullName && Boolean(formik.errors.fullName)}
-              // @ts-ignore
-              helperText={formik.touched.fullName && formik.errors.fullName}
+              helperText={formik.touched.fullName && formik.errors.fullName ? String(formik.errors.fullName) : ''}
             />
           </Grid>
           <Grid size={{ xs: 12 }}>
@@ -122,8 +122,7 @@ const Form = (): JSX.Element => {
               value={formik.values.email}
               onChange={formik.handleChange}
               error={formik.touched.email && Boolean(formik.errors.email)}
-              // @ts-ignore
-              helperText={formik.touched.email && formik.errors.email}
+              helperText={formik.touched.email && formik.errors.email ? String(formik.errors.email) : ''}
             />
           </Grid>
           <Grid size={{ xs: 12 }}>
@@ -145,8 +144,7 @@ const Form = (): JSX.Element => {
               value={formik.values.message}
               onChange={formik.handleChange}
               error={formik.touched.message && Boolean(formik.errors.message)}
-              // @ts-ignore
-              helperText={formik.touched.message && formik.errors.message}
+              helperText={formik.touched.message && formik.errors.message ? String(formik.errors.message) : ''}
             />
           </Grid>
           <Grid container justifyContent="center" size={{ xs: 12 }}>

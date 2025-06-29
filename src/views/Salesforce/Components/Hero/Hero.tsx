@@ -18,7 +18,7 @@ const Hero = (): JSX.Element => {
     };
 
     jarallaxInit();
-  });
+  }, []);
 
   return (
     <Box
