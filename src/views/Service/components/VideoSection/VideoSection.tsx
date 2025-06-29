@@ -4,6 +4,7 @@ import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
+import Image from 'next/image';
 import PhoneSkeletonIllustration from 'svg/illustrations/PhoneSkeleton';
 
 const VideoSection = (): JSX.Element => {
@@ -45,18 +46,15 @@ const VideoSection = (): JSX.Element => {
                 width={'92.4%'}
                 height={'96%'}
               >
-                <Box
-                  component={'img'}
-                  loading="lazy"
+                <Image
                   src={
                     theme.palette.mode === 'light'
-                      ? 'https://assets.maccarianagency.com/screenshots/mobile-app-light.png'
-                      : 'https://assets.maccarianagency.com/screenshots/mobile-app-dark.png'
+                      ? 'https://assets.maccarianagency.com/screenshots/crypto-mobile.png'
+                      : 'https://assets.maccarianagency.com/screenshots/crypto-mobile--dark.png'
                   }
                   alt="Mobile Technology Solution Preview"
-                  width={1}
-                  height={1}
-                  sx={{
+                  fill
+                  style={{
                     objectFit: 'cover',
                     borderRadius: '2.5rem',
                     filter:

@@ -8,6 +8,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemText from '@mui/material/ListItemText';
 import Avatar from '@mui/material/Avatar';
+import Image from 'next/image';
 import PhoneSkeletonIllustration from 'svg/illustrations/PhoneSkeleton';
 
 const Features = (): JSX.Element => {
@@ -112,18 +113,15 @@ const Features = (): JSX.Element => {
                 width={'92.4%'}
                 height={'96%'}
               >
-                <Box
-                  component={'img'}
-                  loading="lazy"
+                <Image
                   src={
                     theme.palette.mode === 'light'
-                      ? 'https://assets.maccarianagency.com/screenshots/business-app-light.png'
-                      : 'https://assets.maccarianagency.com/screenshots/business-app-dark.png'
+                      ? 'https://assets.maccarianagency.com/screenshots/crypto-mobile.png'
+                      : 'https://assets.maccarianagency.com/screenshots/crypto-mobile--dark.png'
                   }
                   alt="Business Application Interface"
-                  width={1}
-                  height={1}
-                  sx={{
+                  fill
+                  style={{
                     objectFit: 'cover',
                     borderRadius: '2.5rem',
                     filter:

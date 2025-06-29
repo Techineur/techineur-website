@@ -4,6 +4,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
+import Image from 'next/image';
 import LaptopSkeletonIllustration from 'svg/illustrations/LaptopSkeleton';
 
 const Hero = (): JSX.Element => {
@@ -50,19 +51,21 @@ const Hero = (): JSX.Element => {
           'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
         ].map((item, i) => (
           <Box maxWidth={70} marginTop={2} marginRight={4} key={i}>
-            <Box
-              component="img"
-              height={1}
-              width={1}
+            <Image
               src={item}
-              alt="Technology partner logo"
-              sx={{
+              alt={`${['Next.js', 'Python', 'Azure', 'TypeScript'][i]} technology logo`}
+              width={70}
+              height={70}
+              style={{
                 filter:
                   theme.palette.mode === 'dark'
                     ? 'brightness(0.8)'
                     : 'none',
                 objectFit: 'contain',
+                width: '100%',
+                height: 'auto',
               }}
+              priority={i < 2} // Prioritize first 2 images
             />
           </Box>
         ))}
@@ -114,20 +117,18 @@ const Hero = (): JSX.Element => {
                 border={`1px solid ${theme.palette.alternate.dark}`}
                 zIndex={3}
               >
-                <Box
-                  component={'img'}
-                  loading="lazy"
-                  src="https://assets.maccarianagency.com/screenshots/tech-dashboard.png"
+                <Image
+                  src="https://assets.maccarianagency.com/screenshots/dashboard.png"
                   alt="Technology Dashboard Preview"
-                  width={1}
-                  height={1}
-                  sx={{
+                  fill
+                  style={{
                     objectFit: 'cover',
                     filter:
                       theme.palette.mode === 'dark'
                         ? 'brightness(0.7)'
                         : 'none',
                   }}
+                  priority
                 />
               </Box>
             </Box>

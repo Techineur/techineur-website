@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { JSX } from 'react';
+import React, { JSX, useState } from 'react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import { useTheme } from '@mui/material/styles';
@@ -9,6 +9,8 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import Alert from '@mui/material/Alert';
+import CircularProgress from '@mui/material/CircularProgress';
 
 const validationSchema = yup.object({
   fullName: yup
@@ -30,6 +32,11 @@ const Form = (): JSX.Element => {
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
 
   const initialValues = {
     fullName: '',
@@ -37,9 +44,31 @@ const Form = (): JSX.Element => {
     email: '',
   };
 
-  const onSubmit = (values: typeof initialValues) => {
-    // Handle form submission here
-    console.log('Form submitted:', values);
+  const onSubmit = async (values: typeof initialValues) => {
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
+    
+    try {
+      // Simulate API call
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+      
+      // TODO: Replace with actual API call
+      console.log('Form submitted:', values);
+      
+      setSubmitStatus({
+        type: 'success',
+        message: 'Thank you for your message! We will get back to you soon.',
+      });
+      
+      formik.resetForm();
+    } catch (error) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Something went wrong. Please try again later.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const formik = useFormik({
@@ -65,6 +94,16 @@ const Form = (): JSX.Element => {
           what's happening with your data, change permissions.
         </Typography>
       </Box>
+      
+      {/* Status Alert */}
+      {submitStatus.type && (
+        <Box marginBottom={3} maxWidth={600} margin={'0 auto 24px auto'}>
+          <Alert severity={submitStatus.type}>
+            {submitStatus.message}
+          </Alert>
+        </Box>
+      )}
+      
       <Box
         maxWidth={600}
         margin={'0 auto'}
@@ -153,8 +192,10 @@ const Form = (): JSX.Element => {
               type="submit"
               color="primary"
               size="large"
+              disabled={isSubmitting}
+              startIcon={isSubmitting ? <CircularProgress size={20} /> : undefined}
             >
-              Send the question
+              {isSubmitting ? 'Sending...' : 'Send the question'}
             </Button>
           </Grid>
         </Grid>
